@@ -59,3 +59,5 @@ print(sorted(unsorted))
 
 brands.sort()
 print(brands)
+
+print("Hello", "This will print out all items even integers", "see: ", 6, 3, 5)
