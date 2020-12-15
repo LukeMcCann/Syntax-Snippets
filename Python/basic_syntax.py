@@ -1,10 +1,10 @@
 # Python strict typing syntax examples
 
-def add(x: int, y: int):
+def add(x: int = 10, y: int = 30):
     return x + y
 
 
-def concat(first: str, second: str):
+def concat(first: str = 'Hello', second: str = 'yolo'):
     return first + second
 
 
