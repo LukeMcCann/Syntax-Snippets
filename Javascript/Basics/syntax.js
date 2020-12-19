@@ -74,3 +74,10 @@ console.log("replace: " + newRandomString.replace('tiddle', 'martin'));
 
 console.log("trimmed: " + randomString.trim().toUpperCase());
 
+
+// Random String
+const generateRandomString = function (length, randomString="") {
+    randomString += Math.random().toString(20).substr(2, length);
+    if (randomString.length > length) return randomString.slice(0, length);
+    return generateRandomString(length, randomString);
+  };
