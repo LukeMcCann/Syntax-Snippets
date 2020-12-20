@@ -13,3 +13,34 @@ function diceRoll() {
 }
 
 console.log(diceRoll());
+
+let password = 'madrid120'
+function validate(enteredPassword) {
+    if (enteredPassword !== password) {
+        return false;
+    }
+    return true;
+}
+
+console.log(validate('guess'));
+
+console.log(validate('madrid120'));
+
+
+function isValidPassword(password, username) {
+    if (password.length < 8) {
+        return false;
+    }
+
+    if (password.indexOf(' ') >= 0) {
+        return false;
+    }
+
+    if (password.indexOf(username) >= 0) {
+        return false;
+    }
+
+    return true;
+}
+
+console.log(isValidPassword('michalefarrer002', 'harmon'));
