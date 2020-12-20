@@ -103,3 +103,15 @@ const double = multiplyBy(2);
 
 console.log(triple(5));
 console.log(double(5));
+
+
+function makeBetweenFunc(min, max) {
+    return function (val) {
+        return val >= min && val <= max;
+    }
+}
+
+const inAgeRange = makeBetweenFunc(0,18);
+
+console.log(inAgeRange(17));
+console.log(inAgeRange(21));
