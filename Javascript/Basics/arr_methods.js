@@ -90,4 +90,7 @@ const odds = allNumbers.filter(n => {
     return n % 2 === 1;
 })
 
+const evens = allNumbers.filter(n => n % 2 === 0);
+
 console.log(odds);
+console.log(evens);
