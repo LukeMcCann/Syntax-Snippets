@@ -37,7 +37,7 @@ for (let book of books) {
 
 
 // Map - create new array from existing array
-let numbers = [10, 20, 4, 32, 10];
+let numbers = [10, 20, 4, 32, 10, 5];
 let newArray = numbers.map(timesTen);
 
 function timesTen(num) {
@@ -49,6 +49,15 @@ let doubled = numbers.map(function (num) {
     return num * 2;
 });
 
+const objectExample = numbers.map(function (n) {
+    return {
+        vaue: n,
+        isEven: n % 2 === 0
+    }
+});
+
 console.log(newArray);
 
 console.log(doubled);
+
+console.log(objectExample);
