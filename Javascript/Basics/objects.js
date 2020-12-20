@@ -96,3 +96,13 @@ let originalVar = 20;
 let updatedVar = originalVar;
 
 console.log(updatedVar);
+
+
+const temp = {
+    removeMe: 'delete',
+    keepMe: 'keep'
+};
+
+delete temp.removeMe;
+
+console.log(temp);
