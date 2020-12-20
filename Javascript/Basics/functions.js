@@ -91,6 +91,7 @@ const thing = {
 console.log(thing.dosomething(5,20));
 
 // Functions as return values
+// these can be thoght of as function factories
 
 function multiplyBy(num) {
     return function (x) {
