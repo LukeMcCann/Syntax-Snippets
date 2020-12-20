@@ -6,7 +6,7 @@ const fitBitData = {
     avgCalorieBurn : 5755,
     workoutsThisWeek : '5 of 7',
     avgGoodSleep : '2:13',
-}
+};
 
 console.log(`Total steps: ${fitBitData.totalsteps}`);
 
@@ -37,7 +37,7 @@ const student = {
         computer_science: 92,
         music: 87
     }
-}
+};
 
 console.log(student.grades.computer_science);
 
