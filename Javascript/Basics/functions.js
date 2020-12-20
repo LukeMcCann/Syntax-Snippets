@@ -126,3 +126,15 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', function () {
     alert('GAHH GO AWAY!');
 });
+
+// Function expressions may also be declared with arrow functions
+
+const squareFunctionExpression = function (x) {
+    return x * x;
+}
+
+const sqaure = (x) => {
+    return x * x;
+}
+
+console.log(square(100));
