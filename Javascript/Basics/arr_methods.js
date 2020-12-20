@@ -28,3 +28,9 @@ const books = [
 books.forEach(function (book) {
     console.log(book.title.toUpperCase());
 });
+
+// this can be done using forOf, the difference here is forOf
+// is simply a code block loop whilst forEach calls a method
+for (let book of books) {
+    console.log(book.title.toLowerCase());
+}
