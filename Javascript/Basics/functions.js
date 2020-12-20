@@ -78,3 +78,7 @@ function divide(x,y) {
 const operations = [add, subtract, multiply, divide];
 
 console.log(operations[0](4,2));
+
+for (let func of operations) {
+    console.log(func(100,20));
+}
