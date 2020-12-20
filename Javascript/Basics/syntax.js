@@ -74,6 +74,30 @@ console.log("replace: " + newRandomString.replace('tiddle', 'martin'));
 
 console.log("trimmed: " + randomString.trim().toUpperCase());
 
+// Template literals (interpolation)
+
+const template = `I ate ${2+3} pies`;
+
+console.log(`Random number in Base 16: ${Math.random().toString(16)}`)
+
+// Math
+
+console.log(Math.PI);
+
+console.log(Math.round(2.3));
+
+console.log(Math.abs(-12));
+
+console.log(Math.pow(2,3));
+
+console.log(Math.floor(2.98));
+
+typeof 100;
+
+typeof 'hello';
+
+parseInt('22.33');
+parseFloat('22.33');
 
 // Random String
 const generateRandomString = function (length, randomString="") {
