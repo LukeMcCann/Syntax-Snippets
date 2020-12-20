@@ -28,3 +28,17 @@ emptyObject.secondEntry ='miachael';
 console.log(emptyObject.firstEntry);
 
 console.log(emptyObject.secondEntry);
+
+const student = {
+    name: 'Luke', 
+    surname: 'McCann', 
+    strengths: ['programming', 'music'],
+    grades: {
+        computer_science: 92,
+        music: 87
+    }
+}
+
+console.log(student.grades.computer_science);
+
+console.log(student['grades']['music']);
