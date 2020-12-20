@@ -13,3 +13,11 @@ while (x !== 20) {
     console.log(x);
     ++x;
 }
+
+
+// Forof (similar to foreach PHP)
+let items = ['milk', 'eggs', 'chicken'];
+
+for (let item of items) {
+    console.log(item);
+}
