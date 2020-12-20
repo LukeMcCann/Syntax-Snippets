@@ -67,5 +67,5 @@ console.log(numbers.slice(0, 3));
 numbers.splice(2, 0, 'undefined')
 console.log(numbers);
 
-numbers.splice(2, 3);
+console.log(numbers.splice(2, 3));
 console.log(numbers);
