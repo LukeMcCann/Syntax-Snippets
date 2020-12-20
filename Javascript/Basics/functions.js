@@ -44,3 +44,15 @@ function isValidPassword(password, username) {
 }
 
 console.log(isValidPassword('michalefarrer002', 'harmon'));
+
+
+// Function expression 
+// Function expressiosn are not hoisted unlike delcarations, this means 
+// they cannot be used before they are created
+
+// similar to anonymous funcitons in PHP
+
+const square = function (num) {
+    return num * num;
+}
+console.log(square(7));
