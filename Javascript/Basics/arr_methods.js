@@ -69,3 +69,15 @@ const abbreves = acronyms.map(function (word) {
 });
 
 console.log(abbreves);
+
+let contacts = [
+    'Bob McCann',
+    'Jean McCann',
+    'Jacqueline McCann',
+    'Darryl Dolan',
+    'Luke McCann'
+];
+
+let contact = contacts.find(contact => contact.indexOf('Darryl') === 0);
+
+console.log(contact);

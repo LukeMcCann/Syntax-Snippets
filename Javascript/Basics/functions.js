@@ -145,3 +145,13 @@ const greet = () => {
 }
 
 greet();
+
+
+// Implicit Returns
+// Implicit returns can be used when writing simple
+// arrow functions with a single expression
+
+const implicitSqaure = n => (n*n);
+
+console.log(implicitSqaure(2));
+
