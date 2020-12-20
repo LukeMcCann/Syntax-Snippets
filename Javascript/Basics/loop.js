@@ -21,3 +21,11 @@ let items = ['milk', 'eggs', 'chicken'];
 for (let item of items) {
     console.log(item);
 }
+
+// forIn loops
+
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
