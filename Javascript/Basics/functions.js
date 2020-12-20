@@ -89,3 +89,17 @@ const thing = {
 }
 
 console.log(thing.dosomething(5,20));
+
+// Functions as return values
+
+function multiplyBy(num) {
+    return function (x) {
+        return x * num;
+    }
+}
+
+const triple = multiplyBy(3);
+const double = multiplyBy(2);
+
+console.log(triple(5));
+console.log(double(5));
