@@ -44,4 +44,11 @@ function timesTen(num) {
     return num * 10;
 }
 
+// this can also be done with anonymous functions
+let doubled = numbers.map(function (num) {
+    return num * 2;
+});
+
 console.log(newArray);
+
+console.log(doubled);
