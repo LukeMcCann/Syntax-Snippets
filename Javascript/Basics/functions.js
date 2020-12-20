@@ -116,3 +116,13 @@ const inAgeRange = makeBetweenFunc(0,18);
 
 console.log(inAgeRange(17));
 console.log(inAgeRange(21));
+
+
+// Callback functions
+// functions passed into other functions as an argument
+// invoked in the outer function
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', function () {
+    alert('GAHH GO AWAY!');
+});
