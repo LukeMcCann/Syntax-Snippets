@@ -9,3 +9,12 @@ const fitBitData = {
 }
 
 console.log(`Total steps: ${fitBitData.totalsteps}`);
+
+console.log(fitBitData['avgCalorieBurn']);
+
+const numbers = {
+    100: 'one hundred',
+    16: 'sixteen'
+}
+
+console.log(numbers['100']);
