@@ -81,3 +81,13 @@ let contacts = [
 let contact = contacts.find(contact => contact.indexOf('Darryl') === 0);
 
 console.log(contact);
+
+// Filter
+
+const allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const odds = allNumbers.filter(n => {
+    return n % 2 === 1;
+})
+
+console.log(odds);
