@@ -18,3 +18,13 @@ const numbers = {
 }
 
 console.log(numbers['100']);
+
+const emptyObject = {}
+
+emptyObject['firstEntry'] = 4.0;
+
+emptyObject.secondEntry ='miachael';
+
+console.log(emptyObject.firstEntry);
+
+console.log(emptyObject.secondEntry);
