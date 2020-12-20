@@ -138,3 +138,10 @@ const sqaure = (x) => {
 }
 
 console.log(square(100));
+
+
+const greet = () => {
+    console.log('Hello');
+}
+
+greet();
