@@ -61,3 +61,11 @@ console.log(newArray);
 console.log(doubled);
 
 console.log(objectExample);
+
+const acronyms = ['asap', 'byob', 'rsvp', 'diy'];
+
+const abbreves = acronyms.map(function (word) {
+    return word.toUpperCase().split('').join('.');
+});
+
+console.log(abbreves);
