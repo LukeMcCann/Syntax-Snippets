@@ -42,3 +42,57 @@ const student = {
 console.log(student.grades.computer_science);
 
 console.log(student['grades']['music']);
+
+
+const shoppingCart = [
+    {
+        product: 'HeadFirst PHP', 
+        price: 20.00,
+        quantity: 1
+    },
+    {
+        product: 'Laravel Quick Start',
+        price: 18.00,
+        quantity: 1
+    }
+];
+
+console.log(shoppingCart[0].product);
+
+
+const game = {
+    player1: {
+        username: 'Surion',
+        playingAs: 'x'
+    },
+    player2: {
+        username: 'Marco',
+        playingAs: '0'
+    },
+    board: [['0', null, 'x'], ['x', '0', 'x']]
+}
+
+console.log(game.player1.playingAs);
+
+// Objects and array constants save by reference
+// variables save by value
+// Changing a object saved by reference changes the original object
+// Example: 
+
+const original = {
+    red: 'red',
+    green: 'green'
+};
+
+const updated = original;
+
+updated['purple'] = 'purple';
+
+console.log(original);
+
+
+let originalVar = 20;
+
+let updatedVar = originalVar;
+
+console.log(updatedVar);
