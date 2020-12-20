@@ -98,6 +98,8 @@ let updatedVar = originalVar;
 console.log(updatedVar);
 
 
+// delete property
+
 const temp = {
     removeMe: 'delete',
     keepMe: 'keep'
