@@ -82,3 +82,10 @@ console.log(operations[0](4,2));
 for (let func of operations) {
     console.log(func(100,20));
 }
+
+
+const thing = {
+    dosomething : multiply
+}
+
+console.log(thing.dosomething(5,20));
