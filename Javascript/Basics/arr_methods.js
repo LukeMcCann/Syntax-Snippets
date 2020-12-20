@@ -34,3 +34,14 @@ books.forEach(function (book) {
 for (let book of books) {
     console.log(book.title.toLowerCase());
 }
+
+
+// Map - create new array from existing array
+let numbers = [10, 20, 4, 32, 10];
+let newArray = numbers.map(timesTen);
+
+function timesTen(num) {
+    return num * 10;
+}
+
+console.log(newArray);
