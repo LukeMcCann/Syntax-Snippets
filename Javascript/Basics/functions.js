@@ -56,3 +56,25 @@ const square = function (num) {
     return num * num;
 }
 console.log(square(7));
+
+
+
+function add(x,y) {
+    return x + y;
+}
+
+function multiply(x,y) {
+    return x * y;
+}
+
+function subtract(x,y) {
+    return x - y;
+}
+
+function divide(x,y) {
+    return x / y;
+}
+
+const operations = [add, subtract, multiply, divide];
+
+console.log(operations[0](4,2));
