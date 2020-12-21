@@ -111,3 +111,10 @@ const allEndInEOrP = words.every(word => {
 });
 
 console.log(allEndInEOrP);
+
+const someEndInE = words.some(word => {
+    const lastLetter = word.length-1;
+    return word[lastLetter] === 'e';
+});
+
+console.log(someEndInE);
