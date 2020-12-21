@@ -99,3 +99,10 @@ function fullName(first, last, ...titles) {
 }
 
 fullName('Luke', 'McCann', 'Doctor', 'Master');
+
+
+const times = (...nums) => (
+    nums.reduce((total, index) => total * index )
+);
+
+console.log(times(2,3,4));
