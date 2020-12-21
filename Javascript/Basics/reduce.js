@@ -38,9 +38,19 @@ console.log(result);
 // Find Max
 const grades = [93, 92, 80, 72, 63, 74, 87, 82, 99];
 
+// let topGrade = grades.reduce((max, index) => {
+//     index > max ? max = index : max = max;
+//     return max;
+// });
+
 let topGrade = grades.reduce((max, index) => {
-    index > max ? max = index : max = max;
-    return max;
+    return Math.max(max, index);
 });
 
 console.log(topGrade);
+
+let bottomGrade = grades.reduce((min, index) => {
+    return Math.min(min, index);
+});
+
+console.log(bottomGrade);
