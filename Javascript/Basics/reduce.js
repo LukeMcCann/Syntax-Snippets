@@ -24,3 +24,23 @@ let sum = unordered.reduce((accumulator, currentValue) => {
 });
 
 console.log(sum);
+
+
+// Multiply
+const multiply = [3, 4, 5, 6, 7];
+
+let result = multiply.reduce((total, currentValue) => {
+    return total * currentValue;
+});
+
+console.log(result);
+
+// Find Max
+const grades = [93, 92, 80, 72, 63, 74, 87, 82, 99];
+
+let topGrade = grades.reduce((max, index) => {
+    index > max ? max = index : max = max;
+    return max;
+});
+
+console.log(topGrade);
