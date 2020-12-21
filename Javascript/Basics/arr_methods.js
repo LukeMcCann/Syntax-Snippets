@@ -94,3 +94,20 @@ const evens = allNumbers.filter(n => n % 2 === 0);
 
 console.log(odds);
 console.log(evens);
+
+
+// Every 
+// Must return true for all elements in array
+
+const words = ['elevate', 'construe', 'develop', 'disgrace'];
+
+console.log(words.every(word => word.length > 3));
+
+console.log(words.every(word => word.length < 2));
+
+const allEndInEOrP = words.every(word => {
+    const lastLetter = word.length-1;
+    return word[lastLetter] === 'e' || word[lastLetter] === 'p';
+});
+
+console.log(allEndInEOrP);
