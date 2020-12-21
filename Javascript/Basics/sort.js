@@ -27,6 +27,9 @@ console.log(sortedAsString);
 // in this instance we have: 35.99 - 12.00 = 23.99
 //
 // 23.99 is a positive number, therefore b is ordered before a
+//
+// Remember that sort is one of the few methods which updates (mutates) the original array
+// you can use slice() with no parameters to save this to a new array instead.
 
 // Sort ascending
 const sortedAsInteger = prices.sort((a, b) => a - b);
