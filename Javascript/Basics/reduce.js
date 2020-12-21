@@ -63,3 +63,20 @@ let add = unordered.reduce((accumulator, currentValue) => {
 }, 2000);
 
 console.log(add);
+
+
+// We can also use reduce to tally items of an array
+
+const votes = ['y', 'y', 'n', 'y', 'y', 'n', 'n', 'y', 'y', 'n', 'n', 'y', 'y', 'n'];
+
+// const results = votes.reduce((tally, index) => {
+//     if (tally[index]) {
+//         tally[index]++;
+//     } else {
+//         tally[index] = 1;
+//     }
+// }, {});
+
+const results = votes.reduce((tally, index) => {
+    tally[index] = (tally[index] || 0) + 1;
+}, {});
