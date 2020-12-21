@@ -16,6 +16,9 @@ greet('Luke');
 // Spread
 // Expands an iterable into a list of arguments
 
+// for instance, Math.max must have individual values passed,
+// if we have an array of numbers we can use spread to pass in
+// the array as individual arguments
 const nums = [9, 3, 2, 8];
 let max = Math.max(...nums);
 
@@ -52,3 +55,5 @@ const lion = { ...feline, genus: 'Panthera' };
 
 const catDog = { ...feline, ...canine }
 // { legs: 4, family: "Caninae", furry: true }
+
+// conflicting properties overwrite one another
