@@ -54,3 +54,12 @@ let bottomGrade = grades.reduce((min, index) => {
 });
 
 console.log(bottomGrade);
+
+// Reduce can also take an initial starting value
+// as a second parameter
+
+let add = unordered.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 2000);
+
+console.log(add);
