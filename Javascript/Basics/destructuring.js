@@ -39,17 +39,53 @@ console.log(losers);
 
 // Destructuring objects
 
-const runner = {
-    first: "Eliud",
-    last: "Kipchoge",
-    country: "Kenya", 
-    title: "Elder of the Order of the Golden Heart of Kenya"
-}
-const {first, last, country} = runner; 
+// const runner = {
+//     first: "Eliud",
+//     last: "Kipchoge",
+//     country: "Kenya", 
+//     title: "Elder of the Order of the Golden Heart of Kenya"
+// }
+// const { first, last, country } = runner; 
 
-first;
-last;
-country;
+// first;
+// last;
+// country;
 
+const results = [
+    {
+        first: "Eliud",
+        last: "Kipchoge",
+        country: "Kenya",
+    },
+    {
+        first: "Feyisa",
+        last: "Lilesa",
+        country: "Ethiopia",
+    },
+    {
+        first: "Galen",
+        last: "Rupp",
+        country: "United States"
+    }
+]
 
+const [, { country }] = results;
+
+const [{ first: goldWinner }] = results;
+
+console.log(goldWinner);
  
+
+// Destruturing Parameters
+// Extract values from the arguments passed in
+
+const person = {
+    first: "Martin",
+    last: "King",
+    title: "Sir"
+}
+function print({ first, last, title }) {
+    console.log(`${first} ${last} ${title}`)
+}
+
+print(person);
