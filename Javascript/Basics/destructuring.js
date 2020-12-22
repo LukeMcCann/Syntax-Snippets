@@ -89,3 +89,15 @@ function print({ first, last, title }) {
 }
 
 print(person);
+
+const response = [
+    'HTTP/1.1',
+    '200 OK',
+    'application/json',
+];
+
+function parseResponse([, statusCode]) {
+    console.log(`Status: ${statusCode}`);
+}
+
+parseResponse(response);
