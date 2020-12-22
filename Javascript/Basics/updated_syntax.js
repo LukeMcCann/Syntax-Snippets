@@ -106,3 +106,10 @@ const times = (...nums) => (
 );
 
 console.log(times(2,3,4));
+
+
+let float = 2.33443445253324;
+
+console.log(float.toFixed());
+
+console.log(float.toFixed(2));
