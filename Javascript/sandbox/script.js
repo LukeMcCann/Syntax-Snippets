@@ -1,22 +1,15 @@
-const users = [
-    {
-        id: 1, 
-        name: 'Darryl'
-    },
-    {
-        id: 2,
-        name: 'Robert'
-    },
-    {
-        id: 3,
-        name: 'Jean'
-    }
-]
+const pokemon = {
+    name: 'Charizard',
+    type: ['Fire', 'Flying'],
+    level: 100,
+    moves: [
+        'Fire Blast',
+        'Dragon Claw',
+        'Outrage',
+        'Fly'
+    ]
+}
 
-const ids = users.map((user) => {
-    return user.id;
-});
-
-ids.forEach((id) => {
-    console.log(id);
-});
+for (let x in pokemon) {
+    console.log(`${x} : ${pokemon[x]}`);
+}
