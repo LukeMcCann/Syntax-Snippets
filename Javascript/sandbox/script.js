@@ -31,8 +31,9 @@ let h1 = body.getElementsByTagName('h1');
 //     console.log('YES');
 // }
 
-let height = window.outerHeight;
 
-let width = window.outerWidth;
+let innerHeight = window.innerHeight;
 
-console.log(`Height: ${height} : Width: ${width}`);
+let innerWidth = window.innerWidth;
+
+console.log(`InnerHeight: ${innerHeight} : InnerWidth: ${innerWidth}`);
