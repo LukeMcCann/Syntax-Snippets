@@ -1,3 +1,14 @@
+const pokemon = [
+    'Charmander',
+    'Squirtle',
+    'Bulbasaur',
+];
+
+pokemon.forEach((pokemon) => {
+    console.log(pokemon);
+});
+
+
 const users = [
     {
         id: 1, 
