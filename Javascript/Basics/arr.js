@@ -32,6 +32,8 @@ ids.forEach((id) => {
     console.log(id);
 });
 
+
+
 const pokemon = {
     name: 'Charizard',
     type: ['Fire', 'Flying'],
