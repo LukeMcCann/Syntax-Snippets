@@ -37,3 +37,13 @@ let innerHeight = window.innerHeight;
 let innerWidth = window.innerWidth;
 
 console.log(`InnerHeight: ${innerHeight} : InnerWidth: ${innerWidth}`);
+
+let outerHeight = window.outerHeight;
+
+let outerWdith = window.outerWidth;
+
+console.log(`OuterHieght: ${outerHeight} : OuterWidth: ${outerWdith}`);
+
+console.log(window.scrollY);
+
+console.log(window.scrollX);
