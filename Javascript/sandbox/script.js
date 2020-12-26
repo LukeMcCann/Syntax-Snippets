@@ -47,3 +47,22 @@ console.log(`OuterHieght: ${outerHeight} : OuterWidth: ${outerWdith}`);
 console.log(window.scrollY);
 
 console.log(window.scrollX);
+
+console.log(window.location);
+
+console.log(window.location.hostname);
+
+console.log(window.location.search);
+
+// window.location.href = 'https://google.com';
+
+// window.location.reload();
+
+console.log(window.history);
+
+// window.history.go();
+
+console.log(window.navigator);
+
+
+console.log(window.navigator.platform);
