@@ -33,3 +33,23 @@ console.log(task_title);
 // Get by class
 let card_title = document.querySelector('.card-title');
 console.log(card_title);
+
+// If there are more than one of the same element, 
+// only the first is returned
+let first_h5 = document.querySelector('h5');
+console.log(first_h5.textContent);
+
+// target first list item
+let first_li = document.querySelector('li');
+first_li.style.backgroundColor = 'green';
+
+// target nested element
+let input_field = document.querySelector('form .input-field');
+input_field.style.backgroundColor = 'orange';
+
+// select last item
+let last_li = document.querySelector('li:last-child');
+last_li.style.backgroundColor = 'pink';
+
+// select nth item
+let nth_li = document.querySelector('li:nth-child(3)').style.backgroundColor = 'yellow';
