@@ -34,6 +34,9 @@ console.log(document.forms[0]);
 console.log('Form id:');
 console.log(document.forms[0].id);
 
+console.log('Form Method:');
+console.log(document.forms[0].method);
+
 console.log('Nested Element Class:');
 console.log(document.forms[0][1].className);
 
@@ -43,3 +46,13 @@ console.log(document.all);
 
 console.log(document.all[2]);
 console.log(document.all[4]);
+
+
+// links
+console.log('Links:');
+console.log(document.links);
+
+
+// images
+console.log('Images:');
+console.log(document.images);
