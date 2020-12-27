@@ -53,3 +53,9 @@ last_li.style.backgroundColor = 'pink';
 
 // select nth item
 let nth_li = document.querySelector('li:nth-child(3)').style.backgroundColor = 'yellow';
+
+// select first odd item
+// let first_odd = document.querySelector('li:nth-child(odd)').style.backgroundColor = 'gray';
+
+// select first even
+let first_even = document.querySelector('li:nth-child(even)').style.backgroundColor = 'gray';
