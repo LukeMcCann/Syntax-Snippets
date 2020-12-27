@@ -66,3 +66,6 @@ console.log(window.navigator);
 
 
 console.log(window.navigator.platform);
+
+console.log(window.navigator.vendor);
+
