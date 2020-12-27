@@ -30,6 +30,13 @@ console.log(document.forms);
 console.log('Specific Form:');
 console.log(document.forms[0]);
 
+// Getting from elements
+console.log('Form id:');
+console.log(document.forms[0].id);
+
+console.log('Nested Element Class:');
+console.log(document.forms[0][1].className);
+
 // HTML collections are like arrays, but do not support foreach()
 console.log('HTML Collection:');
 console.log(document.all);
