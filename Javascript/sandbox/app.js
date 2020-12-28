@@ -30,3 +30,15 @@ let lis = document.getElementsByTagName('li');
 // lis = Array.from(lis);
 // lis.reverse();
 // console.log(lis);
+
+lis = Array.from(lis);
+
+// lis.forEach(element => {
+//     console.log(element.className);
+// });
+
+
+
+// lis.forEach(li => {
+//     li.textContent = 'Awesome';
+// });
