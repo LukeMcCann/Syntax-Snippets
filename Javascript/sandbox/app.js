@@ -9,7 +9,7 @@ const listItem = document.querySelector('li.collection-item');
 let childNodes = list.childNodes;
 // console.log(childNodes);
 // console.log(childNodes[1].nodeName);
-console.log(childNodes[1].nodeType);
+// console.log(childNodes[1].nodeType);
 
 // Node Types:
 // 1 - Element
@@ -25,4 +25,6 @@ console.log(childNodes[1].nodeType);
 // returns a HTMLCollection
 let children = list.children;
 // console.log(children);
+// children[1].textContent = 'Hello';
+console.log(children[3].children[0]);
 
