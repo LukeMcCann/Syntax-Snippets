@@ -20,7 +20,7 @@
 // console.log(listItems);
 
 
-let lis = document.getElementsByTagName('li');
+// let lis = document.getElementsByTagName('li');
 
 // console.log(lis);
 
@@ -31,14 +31,23 @@ let lis = document.getElementsByTagName('li');
 // lis.reverse();
 // console.log(lis);
 
-lis = Array.from(lis);
+// lis = Array.from(lis);
 
 // lis.forEach(element => {
 //     console.log(element.className);
 // });
 
-
-
 // lis.forEach(li => {
 //     li.textContent = 'Awesome';
 // });
+
+
+// Node list
+// let lis = document.querySelectorAll('ul.collection.li.collection-item');
+// console.log(lis);
+
+let items = document.querySelectorAll('ul li');
+
+items.forEach((item, index) => {
+    item.textContent = `${index}: Hello`;
+});
