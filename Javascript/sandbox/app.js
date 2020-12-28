@@ -1,61 +1,32 @@
 // DOM Selectors
 
-
-
 /** 
- * Multiple Element Selectors
+ * Multi Element Selectors
  **/
 
-/** 
- * Single Element Selectors
- **/
+// Multi element selectors return a HTMLCollection of elemnts
 
-let task_title = document.getElementById('task-title');
-console.log(task_title);
+// let items = document.getElementsByClassName('collection-item');
 
-console.log(task_title.id);
-console.log(task_title.className);
+// Get first list item
+// console.log(items[0]);
 
-task_title.style.backgroundColor = 'aqua';
-task_title.style.padding = '5px';
-// task_title.style.display = 'none';
+// items[0].style.color = 'red';
+// items[3].textContent = 'Charmander';
 
-task_title.textContent = 'Hacked Content!';
-// task_title.innerText = 'Inner Text';
-task_title.innerHTML = '<h3 style="color: red; background-color: black">Task List</h3>';
 
-// Query Selector: newer thant getElementById and more flexible
 
-// Get by id
-task_title = document.querySelector('#task-title');
-console.log(task_title);
+// let listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+// console.log(listItems);
 
-// Get by class
-let card_title = document.querySelector('.card-title');
-console.log(card_title);
 
-// If there are more than one of the same element, 
-// only the first is returned
-let first_h5 = document.querySelector('h5');
-console.log(first_h5.textContent);
+let lis = document.getElementsByTagName('li');
 
-// target first list item
-let first_li = document.querySelector('li');
-first_li.style.backgroundColor = 'green';
+// console.log(lis);
 
-// target nested element
-let input_field = document.querySelector('form .input-field');
-input_field.style.backgroundColor = 'orange';
+// array methods such as reverse are not available for HTML collecitons
+// We can convert HTML colleciton into array 
 
-// select last item
-let last_li = document.querySelector('li:last-child');
-last_li.style.backgroundColor = 'pink';
-
-// select nth item
-let nth_li = document.querySelector('li:nth-child(3)').style.backgroundColor = 'yellow';
-
-// select first odd item
-// let first_odd = document.querySelector('li:nth-child(odd)').style.backgroundColor = 'gray';
-
-// select first even
-let first_even = document.querySelector('li:nth-child(even)').style.backgroundColor = 'gray';
+// lis = Array.from(lis);
+// lis.reverse();
+// console.log(lis);
