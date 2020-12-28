@@ -46,8 +46,25 @@
 // let lis = document.querySelectorAll('ul.collection.li.collection-item');
 // console.log(lis);
 
-let items = document.querySelectorAll('ul li');
+// let items = document.querySelectorAll('ul li');
 
-items.forEach((item, index) => {
-    item.textContent = `${index}: Hello`;
+// items.forEach((item, index) => {
+//     item.textContent = `${index}: Hello`;
+// });
+
+let listItemsOdd = document.querySelectorAll('ul li:nth-child(odd)');
+let listItemsEven = document.querySelectorAll('ul li:nth-child(even)');
+
+listItemsOdd.forEach((items, index) => {
+    items.style.color = 'red';
+    items.style.backgroundColor = 'black';
+    items.textContent = 'Odd Items';
 });
+
+listItemsEven.forEach((items, index) => {
+    items.style.backgroundColor = 'aqua';
+    items.style.color = 'green';
+    items.textContent = 'Even Items';
+})
+
+
