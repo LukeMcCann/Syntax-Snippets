@@ -29,3 +29,8 @@ let children = list.children;
 // console.log(children[3].children[0]);
 
 // prevSibling and nextSibling can also be used
+
+
+// get siblings 
+console.log(listItem.nextSibling);
+console.log(listItem.nextElementSibling);
