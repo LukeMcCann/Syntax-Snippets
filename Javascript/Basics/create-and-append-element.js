@@ -31,3 +31,17 @@ lis.forEach((li, index) => {
 console.log('');
 console.log('New Element:');
 console.log(li);
+
+
+// Create new link element
+let link = document.createElement('a');
+link.className = 'delete-item secondary-content';
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link as child of li
+li.appendChild(link);
+
+// Append li as child of ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
