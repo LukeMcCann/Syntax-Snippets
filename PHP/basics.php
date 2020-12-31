@@ -1,4 +1,28 @@
-<?php 
+<?php
+
+// Declare strict types
+// This must be done for every file,
+// strict typing forces you to pass proper types
+// leading to better readability, reliability and less bugs
+declare(strict_types = 1);
+
+// Print
+echo 'thing to print';
+
+// include/require
+
+include('file_path.php');
+require('file_path.php');
+
+include_once('file_path.php');
+require_once('file_path.php');
+
+
+include 'file_path.php';
+require 'file_path.php';
+
+include_once 'file_path.php';
+require_once 'file_path.php';
 
 // variables
 
@@ -115,3 +139,113 @@ $assoc = ['key1' => 'value1', 'key2' => 'value2', 'key3' => 'value3'];
 foreach ($assoc as $key => $value) {
     echo "key: $key   :    value: $value";
 }
+
+
+// class
+
+class Person {
+
+    private string $dependency;
+
+    private string $name;
+
+    // Constructor
+    public function __construct(string $dependency)
+    {
+        $this->dependency = $dependency;
+    }
+
+    // Functions/methods
+    public function say() {
+        return $this->dependency;
+    }
+
+    // destructor
+    public function __destruct()
+    {
+        echo 'Destroying object';
+    }
+}
+
+// Other magic methods
+// __get(), __set(), __sleep, __toString()
+
+$person = new Person('Hello');
+
+
+// Interfaces
+// interfaces act as a contract, the object implementing the interface promises
+// to implement any methods declared within that interface.
+interface Animal {
+    private int $legs; 
+
+    public function makeNoise();
+}
+
+class Dog implements Animal {
+    private int $legs;
+
+    public function makeNoise()
+    {
+        echo "Woof!";
+    }
+}
+
+class Cat implements Animal
+{
+    private int $legs;
+
+    public function makeNoise()
+    {
+        echo "Meow!";
+    }
+}
+
+$cat = new Cat();
+$dog = new Dog();
+
+$dog->makeNoise();
+$cat->makeNoise();
+
+// Namespacing
+
+namespace App;
+
+// Inheritance
+
+class Vehicle {
+
+    private int $numWheels;
+    private int $numDoors;
+
+    public function honk() {
+        echo 'Honk!';
+    }
+}
+
+class Car extends Vehicle {}
+
+$car = new Car;
+$car->honk();
+
+// Composition
+
+class GearBox {
+    private int $gear;
+
+    public function __construct(int $defaultGear)
+    {
+        $this->gear = $defaultGear;
+    }
+
+    public function changeGear(int $gear) 
+    {
+        $this->gear = $gear;
+        echo "Current Gear: $gear";
+    }
+}
+
+class Bike {
+    private Gearbox $gearbox;
+}
+
