@@ -47,6 +47,5 @@ card.addEventListener('mousemove', mouseMoveCoordinatesEvent);
 
 function mouseMoveCoordinatesEvent(e) {
     heading.textContent = `MouseX: ${e.offsetX}    :     MouseY: ${e.offsetY}`;
-
     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, ${e.offsetX + e.offsetY * e.offsetX / 2})`;
 }

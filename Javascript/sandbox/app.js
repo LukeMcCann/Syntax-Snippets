@@ -1,40 +1,43 @@
-// Mouse Events
-
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
 
-// Click
-// clearBtn.addEventListener('click', runEvent);
+// Submit
+// form.addEventListener('submit', runEvent);
 
-// Doubeclick
-// clearBtn.addEventListener('dblclick', runEvent);
+// Anonymous arrow function submit
+// form.addEventListener('submit', (e) => {
+//     console.log(`Event Type: ${e.type}`);
+// });
 
-// Mousedown
-// clearBtn.addEventListener('mousedown', runEvent);
+// Input Events: Keydown
+// taskInput.addEventListener('keydown', runInputEvent);
 
-// Mouseup
-// clearBtn.addEventListener('mouseup', runEvent);
+// Keyup
+// taskInput.addEventListener('keyup', runEvent);
 
-// MouseOver/Out fire off when we move onto other elements, even within the 
-// element which has the event listener attached. Whereas mouseenter/leave
-// only fire when actually leaving or entering that element entirely.
+// Keypress
+// taskInput.addEventListener('keypress', runEvent);
 
-// MouseEnter
-// card.addEventListener('mouseenter', runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
 
-// MouseLeave
-// card.addEventListener('mouseleave', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
 
-// MouseOver
-// card.addEventListener('mouseover', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
 
-// MouseOut
-// card.addEventListener('mouseout', runEvent);
+// Paste 
+// taskInput.addEventListener('paste', runEvent);
 
-// Mousemove
-// card.addEventListener('mousemove', runEvent);
-card.addEventListener('mousemove', mouseMoveCoordinatesEvent);
+// Input: fire on any kind of input event
+// taskInput.addEventListener('input', runEvent);
+
+// Changed: Used on SelectLists
+// selectList.addEventListener('change', (e) => {
+//     // do function stuff
+// });
 
 // Event Handlers
 // function runEvent(e) {
@@ -43,10 +46,16 @@ card.addEventListener('mousemove', mouseMoveCoordinatesEvent);
 
 // function runEvent(e) {
 //     console.log(`Event Type: ${e.type}`);
+//     // Prevent Redirects
+//     e.preventDefault();
 // }
 
-function mouseMoveCoordinatesEvent(e) {
-    heading.textContent = `MouseX: ${e.offsetX}    :     MouseY: ${e.offsetY}`;
+// function runInputEvent(e) {
+//     console.log(`Event Type: ${e.type}`);
 
-    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, ${e.offsetX + e.offsetY * e.offsetX / 2})`;
-}
+        // get value of event item
+//     heading.innerText = e.target.value;
+
+//     // Prevent Redirects
+//     e.preventDefault();
+// }
