@@ -22,14 +22,17 @@ $var[0];
 
 $var = ['first-array', ['embedded-array']];
 
-// Associative arrays
-
-$keys = ['key' => 'value', 'key2', 'value2'];
-
 // accessing multi-dimensional arrays
 
 $var[0][1];
 
+// Associative arrays
+
+$keys = ['key' => 'value', 'key2', 'value2'];
+
+// accesing associative arrays
+
+$keys['key'];
 
 // Strings
 
