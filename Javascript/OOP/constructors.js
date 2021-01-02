@@ -25,33 +25,3 @@ tiger = new Animal('Tiger');
 // this is because we are using it inside of the global scope.
 
 console.log(this);
-
-
-// Object Methods
-function Gearbox(currentGear) {
-    this.currentGear = currentGear;
-
-    this.gearUp = function() {
-        if (currentGear <= 0 && currentGear >= 6) return;
-
-        this.currentGear++;
-    }
-
-    this.gearDown = function() {
-        if (currentGear <= 0 && currentGear >= 6) return;
-
-        this.currentGear--;
-    }
-}
-
-gearbox = new Gearbox(1);
-
-console.log(`CurrentGear: ${gearbox.currentGear}`);
-
-gearbox.gearUp();
-
-console.log(`CurrentGear: ${gearbox.currentGear}`)
-
-gearbox.gearDown();
-
-console.log(`CurrentGear: ${gearbox.currentGear}`)
