@@ -115,3 +115,6 @@ p5.Vector.prototype.double = () {
 //
 // In JS everything is an object, all objects inherit from Object.prototype
 // much like how in class based languages every object inherits from the Object class
+// just like in class based languages the Object prototype has methods which may be called on 
+// all objects.
+p1.hasOwnProperty('z');
