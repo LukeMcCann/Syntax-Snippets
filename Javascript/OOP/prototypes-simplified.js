@@ -106,10 +106,3 @@ console.log(luke.getFullName());
 
 // We can call methods from inherited prototypes in the same manner.
 console.log(luke.hasOwnProperty('firstName'));
-console.log(luke.hasOwnProperty('title'));
-
-// This can also be used to check methods, howwever, since we currently
-// define all of our methods within the prototype this will return false.
-// as they are not defined as properties of the object itself.
-console.log(robert.hasOwnProperty('changeName'));
-console.log(darryl.hasOwnProperty('getFullName'));
