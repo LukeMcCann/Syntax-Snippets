@@ -31,7 +31,7 @@
 <body>
     <ul>
         <?php foreach ($result as $row): ?>
-        <li><?= $row->name ?></li>
+            <li><?= $row->name ?></li>
         <?php endforeach; ?>
     </ul>
 </body>
