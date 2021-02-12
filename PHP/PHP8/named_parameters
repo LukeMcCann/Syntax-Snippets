@@ -1,0 +1,27 @@
+<?php 
+
+class Invoice 
+{
+    public function __construct(
+        private string $description, 
+        private float $total, 
+        private string $date, 
+        private bool $paid
+    ) {}
+}
+
+
+// Traditionally
+// $invoice = new Invoice (
+//     'Customer installation',
+//     100.00,
+//     '2020-11-12',
+//     true
+// )
+
+$invoice = new Invoice (    
+    description: 'Customer installation',
+    total: 100.00,
+    date: '2020-11-12',
+    paid: true
+);
