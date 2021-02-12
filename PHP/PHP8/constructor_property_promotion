@@ -1,0 +1,21 @@
+<?php
+
+// Traditional
+// class Person
+// {
+
+//     public function __construct(public string $name, private string $password, protected string $NI)
+//     {
+//         $this->name = $name;
+//         $this->password = $password;
+//         $this->NI = $NI;
+//     }
+// }
+
+// PHP8
+class Person {
+
+    public function __construct(public string $name, private string $password, protected string $NI)
+    {
+    }
+}
