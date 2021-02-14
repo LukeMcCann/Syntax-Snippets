@@ -1,0 +1,55 @@
+$("a").hover(
+  function () {
+    // code on hover over
+  },
+  function () {
+    // code on away from hover
+  }
+);
+
+$("a").on("click", function(e){
+  e.preventDefault();
+});
+
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+$.ajax({
+  type: 'POST',
+  url: 'backend.php',
+  data: "q="+myform.serialize(),
+  success: function(data){
+    // on success use return data here
+  },
+  error: function(xhr, type, exception) { 
+    // if ajax fails display error alert
+    alert("ajax error response type "+type);
+  }
+});
+
+$('p').animate({
+    left: '+=90px',
+    top: '+=150px',
+    opacity: 0.25
+  }, 900, 'linear', function() {
+    // function code on animation complete
+});
+
+$('nav a').toggleClass('selected');
+
+$("a.register").on("click", function(e){
+  $("#signup").fadeToggle(750, "linear");
+});
+
+var maxheight = 0;
+$("div.col").each(function(){
+  if($(this).height() > maxheight) { maxheight = $(this).height(); }
+});
+
+$("div.col").height(maxheight);
+
+var sometext = "here is more HTML";
+$("p#text1").append(sometext); // added after
+$("p#text1").prepend(sometext); // added before
