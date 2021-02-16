@@ -5,5 +5,10 @@ const app = express(); // express module
 
 const port = '3001';
 
-console.log(`Listening on port: ${port}`);
-app.listen(port);
+app.get('/', function (request, response) {
+    response.send('<h1>Hello</h1>');
+}) // Express method to specify the action to take when a request is received
+
+app.listen(port, function () {
+    console.log(`Server started on port ${port}`);
+});
