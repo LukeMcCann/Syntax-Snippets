@@ -4,6 +4,10 @@ export default class User {
         this.name = name;
         this.age = age;
     }
+
+    sayName() {
+        console.log(`Hi, I am ${this.name}`);
+    }
 }
 
 export function printName(user) {
