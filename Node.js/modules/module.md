@@ -46,7 +46,7 @@ In node we do tell JavaScript to explicitly include a module through the exports
 <code>
 <pre>
 // Server.js
-require('./greet');
+const greet = require('./greet');
 greet();
 
 // Greet.js
