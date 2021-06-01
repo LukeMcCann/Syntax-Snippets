@@ -41,3 +41,6 @@ console.log(john.greet());
 
 let jane = new Person('Jane', 'Doe'); 
 console.log(jane.greet());
+
+// We can take a look at the prototype object
+console.log(john.__proto__);
