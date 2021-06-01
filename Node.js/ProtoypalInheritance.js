@@ -37,3 +37,7 @@ console.log(john.greet());
 // When we declare prototypes we are declaring a set of methods to be used by 
 // all objects constructed from this particular object constructor 
 // In this instance, this would be "Person" 
+
+
+let jane = new Person('Jane', 'Doe'); 
+console.log(jane.greet());
