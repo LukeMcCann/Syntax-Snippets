@@ -44,3 +44,10 @@ console.log(jane.greet());
 
 // We can take a look at the prototype object
 console.log(john.__proto__);
+
+
+// It is worth noting that ES6 class syntax is little more than syntactic sugar for prototypes
+// under the Hood JS treats classes the same, creating prototypes for the class methods etc...
+// 
+// it is important to understand that JS classes are not the same as classes in object oriented languages
+// like Java and PHP but instead use the prototype chain and prototypical inheritance.
