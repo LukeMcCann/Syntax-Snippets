@@ -30,4 +30,5 @@ console.log(firstName);
 // This is due to scope, in JS when we
 // declare variables in a function
 // they are protected wihtin their own scope,
-// this is to do with how JS processes data. 
+// this is to do with how JS processes data through
+// creating new execution contexts.
