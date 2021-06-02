@@ -32,3 +32,16 @@ console.log(firstName);
 // they are protected wihtin their own scope,
 // this is to do with how JS processes data through
 // creating new execution contexts.
+
+
+// If we wanted to pass parameters to this function, we 
+// can do so in the same way we would a normal function.
+
+
+(function (lastName) {
+    let firstName ='John';
+    console.log(firstName, ' ', lastName);
+}('Doe'));
+
+let firstName = 'Jane';
+console.log(firstName);
