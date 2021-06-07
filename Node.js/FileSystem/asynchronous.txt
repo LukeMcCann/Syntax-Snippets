@@ -1,0 +1,17 @@
+Asynchronous code is also known as non-blocking code. Unlike 
+synchronous code (where code is processed lexically, in order, line by line),
+asynchronous code is also known as non-blocking code.
+
+Whilst synchronous tasks can block execution, especially 
+when dealing with longer processing times, asynchronous code 
+offloads heavy work to a background task, asynchronous functions
+require a callback function, this starts reading the file in
+the background, then immediately moves onto the next statement. 
+
+This is alternative to the synchronous method which would wait 
+for the processing to be finished. When the process is completed
+the code within the callback function is called. 
+
+This is especially useful in Node as Node is single-threaded.
+The thread being the location in memory (the machines processor) 
+that actually executes the code. 
