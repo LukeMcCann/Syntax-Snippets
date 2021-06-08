@@ -2,7 +2,6 @@
 
 const port = 3000;
 
-const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
