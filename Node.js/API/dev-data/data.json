@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "productName": "Ribeye Steak",
+        "image": "🥩",
+        "from": "England", 
+        "nutrients": "Vitamin B6, Vitamin B12",
+        "quantity": "5 🥩",
+        "price": "10.00", 
+        "organic": true, 
+        "description": "rib-eye steak can come anywhere from the sixth to the twelfth rib, and which end it comes from should dictate how it should be cooked. The centre cut is the most common (and often what you'll find when buying rib-eye steak from supermarkets). It contains some of the fat cap along with a nice amount of marbling."
+    },
+    {
+        "id": 1,
+        "productName": "Chicken",
+        "image": "🍗",
+        "from": "Spain", 
+        "nutrients": "Vitamin B12",
+        "quantity": "20 🍗",
+        "price": "4.00", 
+        "organic": true, 
+        "description": "A 3.5-ounce (100-gram) serving of chicken breast provides 165 calories, 31 grams of protein and 3.6 grams of fat (1). That means that approximately 80% of the calories in chicken breast come from protein, and 20% come from fat."
+    },
+    {
+        "id": 2,
+        "productName": "Beef Burger",
+        "image": "🍔",
+        "from": "USA", 
+        "nutrients": "Vitamin B12, Vitamin B6",
+        "quantity": "8 🍔",
+        "price": "3.25", 
+        "organic": true, 
+        "description": "A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled. ... A hamburger topped with cheese is called a cheeseburger."
+    },
+    {
+        "id": 3,
+        "productName": "Avocado",
+        "image": "🥑",
+        "from": "Brazil", 
+        "nutrients": "Vitamin C, Vitamin K, Vitamin B5, Vitamin B6, Vitamin E",
+        "quantity": "10 🥑",
+        "price": "1.78", 
+        "organic": true, 
+        "description": "Avocado, also called alligator pear, fruit of Persea americana of the family Lauraceae, a tree native to the Western Hemisphere from Mexico south to the Andean regions. Avocado fruits have greenish or yellowish flesh with a buttery consistency and a rich, nutty flavour."
+    },
+    {
+        "id": 4,
+        "productName": "Shrimp",
+        "image": "🦐",
+        "from": "Indonesia", 
+        "nutrients": "Vitamin B12",
+        "quantity": "15 🦐",
+        "price": "6.29", 
+        "organic": true, 
+        "description": "Shrimp are characterized by a semitransparent body flattened from side to side and a flexible abdomen terminating in a fanlike tail. The appendages are modified for swimming, and the antennae are long and whiplike. Shrimp occur in all oceans—in shallow and deep water—and in freshwater lakes and streams"
+    }
+]
