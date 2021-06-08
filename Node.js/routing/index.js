@@ -13,8 +13,11 @@ const server = http.createServer((req, res) => {
     } else if (pathName === '/product') {
         res.end('Product Page');
     } else {
-        res.writeHead(404);
-        res.end('Page not found!');
+        res.writeHead(404, {
+            'Content-Type': 'text/html',
+            'Custom-Header': 'Hello-World'
+        });
+        res.end('<h1>Page not found!</h1>');
     }
 });
 
