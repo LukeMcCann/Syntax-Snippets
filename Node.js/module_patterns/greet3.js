@@ -29,3 +29,8 @@ module.exports = new Greeter();
 // This is because, in the V8 engine, require caches
 // the result of the require function for any
 // particular filename.
+//
+// In this case, because greeter is an object, 
+// it ends up as the same reference in memory
+// (remember objects are passed by reference
+// while primitives are passed by value).
