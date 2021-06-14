@@ -13,3 +13,19 @@ function Greeter() {
 }
 
 module.exports = new Greeter();
+
+
+// This method can cause some confusion in modules
+// for instance, if we require in the file,
+// then update greeting: "greet.greeting = 'changed greeting';
+//
+// Which greeting will we see on the new require?
+// Coming from an object oriented background
+// you would likely think it would be the original 
+// message as you would expect this to be a new instance.
+// However, in JS this is not the case and the second item
+// would also return the changed greeting.
+//
+// This is because, in the V8 engine, require caches
+// the result of the require function for any
+// particular filename.
