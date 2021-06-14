@@ -11,3 +11,7 @@ greet2();
 let greeter = require('./greet3');
 
 greeter.greet();
+
+let greeter2 = require('./greet4');
+
+greeter2.greet();
