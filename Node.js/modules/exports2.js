@@ -28,3 +28,10 @@ console.log(module.exports); // this is what is passed to exports,
 // Here lies the problem, what is returned from require?
 // module.exports, so our updated exports will not be returned
 // from here.
+
+// If we want to return exports in this case, we can't overwrite
+// it, however, we can "mutate" it. 
+
+// Mutating allows the adding of a method or property to an object.
+// here we used '=' which replaced what "exports" was, this caused
+// a new object to be created in a different memory location.
