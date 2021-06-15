@@ -1,0 +1,5 @@
+Per the node documentation, modules are cached after the
+first time they are loaded (loaded is synonymous with 'required'). 
+They are placed in the require. cache . This means that every future 
+require for a previously loaded module throughout a program will load
+the same object that was loaded by the first require.
