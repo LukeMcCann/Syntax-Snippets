@@ -12,3 +12,6 @@ util.log(greeting);
 // Some native modules are exports of C++ code, others 
 // are simply JS code  of common tasks packaged into a usable library
 // for convenience.
+
+// Since you must specify the path/location when specifying custom modules
+// custom modules are able to have the same name as Native modules.
