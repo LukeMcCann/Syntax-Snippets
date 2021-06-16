@@ -1,0 +1,16 @@
+Requiring core modules in node.js 
+
+When the require function is called
+you may recall the filename is attained via the module.
+the module is then cached, meaning that future calls to the same
+module require function will return the cached result.
+
+After this the require function ultimately ends up asking
+a question: 
+     is $this (the thing you requested) a Native Module?
+
+If it is the Native Module is returned, otherwise
+further checks are made.
+
+A Native Module is part of the JavsScript core inside the lib module,
+these are modules which come along with Node.js
