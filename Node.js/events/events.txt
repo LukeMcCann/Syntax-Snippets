@@ -1,0 +1,50 @@
+Events and the Event Emitter
+
+Events
+In Node.js and Event is something
+which has happened within the app 
+that we can respond to. 
+
+This is how we understand the concept of event sin
+most applications, it is nothing new. 
+
+Node however, becomes confusing when we realise that
+when we discuss events in node we are talking about two
+different kinds of events, however, we have a tendency to
+think of these as if they were a single type of event.
+
+The two separate kinds of events in Node.js are often
+associated, or tied together in some way or form, however, 
+they don't have to be, they can be considered as entirely separate
+and different concepts.
+
+On the one hand we are dealing with  System events, on the other
+side we have Custom Events
+
+System Events
+
+System events come from the C++ core, from a library called libuv.
+This deals with events coming from the computer system.
+These are things that JS itself doesn't have the ability to access.
+
+Custom Events
+
+Custom events are inside the JS core, this is a JS library of events
+that deals with  events we create, this is where we tell JS "hey, something happened"
+and respond to it. This is contained in a JS file called Event Emitter. 
+
+
+The lines between these two are blurred because Node.js will often wrap 
+calls to the C++ side of node. This means that often, when an event
+occurs in the C++ side with libuv, it generates a custom JS event,
+to make it easier to manage code and decide what code should run
+when that event is triggered. 
+
+While you can oftentimes think of these two things as the same 
+concept, it is important to understand that the JS side uses faux events.
+In other words, JS is faking it, the Events in JS are not 'real' events.
+JS does not understand the concept of Events, it has no Event object.
+We can however, fake it, we can create our own event library using the
+node Event emitter.
+
+Many core modules are built atop of the Event emitter.
