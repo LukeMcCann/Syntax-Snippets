@@ -5,7 +5,7 @@
 
 var obj = { 
     name: 'Jane Doe', 
-    greet: function() {
+    greet: function(param1, param2) {
         console.log(`Hello ${ this.name }`);
     }
 }
@@ -22,4 +22,11 @@ obj.greet.call();
 // parameter in which we tell it what object to set the 'this' keyword
 // as a reference to. 
 
-obj.greet.call({name: 'Martin Calbeck'});
+obj.greet.call({name: 'Martin Calbeck'}, param1, param2);
+
+// The apply method functions in much the same way
+// only if parameters are passed to the function, 
+// we pass an array of parameters ratger tgab tge call method which 
+// takes parameters separately. 
+
+obj.greet.apply({name: 'Martin Calbeck'}, [param, param2]);
