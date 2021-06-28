@@ -64,3 +64,17 @@ function Teacher(first, last, age, gender, interests, subject) {
 // However, it is important to note that this is just redefining properties
 // anew, not inheriting them from the Person object. This defeats the objective
 // of attempting to use polymorphism. 
+
+// If the constructor you are inheriting from doesn't take it's property
+// value from parameters, you can omit the additional arguments.
+
+function Brick() {
+    this.height = 20;
+    this.width = 20; 
+}
+
+function RedBrick() {
+    Brick.call(this);
+   
+    this.color = 'red';
+}
