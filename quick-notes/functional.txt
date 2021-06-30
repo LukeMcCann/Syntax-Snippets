@@ -1,0 +1,11 @@
+Funcitonal programming is a programming styles much like Object Oriented Programming.
+It has grown in popularity in recent years. 
+
+Where Object Oriented Programming is more inline with the human thought process, thinking
+in terms of the noun, Functional programming is more about the verbs, rather than
+thinking of things in terms of objects, funcitonal programming encourages us to 
+think of things in terms of the actions being undertaken. 
+
+If we were to described a house in an object oriented sense we would discuss the
+walls, doors, windows etc... in a Functional sense we would discuss the actions
+opening/closing etc...
