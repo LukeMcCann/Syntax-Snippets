@@ -1,0 +1,19 @@
+In JS we have the global window object. If we want
+to access a global function, or add a variable to 
+this scope we can do so:
+
+  let name = 'Ted';
+  window.console.log(window.name); // Ted
+  
+In Node we do not have the window object.
+Instead we use the global object to access
+this scope. There is a difference however, 
+due to the modular nature of node, when
+we create a variable it is not created
+as a child of the global object. This
+is because variables in node are only
+accessible in the current file:
+
+  let name = 'Tom';
+  global.console.log(name); // Tom
+  global.console.log(global.name); // undefined 
