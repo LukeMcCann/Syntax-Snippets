@@ -23,6 +23,11 @@ app.get('/api/posts/:year/:month', (req, res) => {
     res.send(`${req.params.year} ${req.params.month}`);
 });
 
+// http://localhost:3000/api/posts?read=true&sortBy=date&sortDir=desc
+app.get('/api/posts', (req, res) => {
+    res.send(req.query);
+});
+
 app.listen(port, (req, res) => {
     console.log(`Listening on port ${port}`);
 });
