@@ -8,6 +8,7 @@ const http = require('http');
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html');
     res.write(`<h1></h1>Hello ${req.url}</h1>`);
+    res.write('<p>Hello again!</p>');
     res.end();
 });
 
