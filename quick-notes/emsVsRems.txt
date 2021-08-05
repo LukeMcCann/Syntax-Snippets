@@ -1,0 +1,3 @@
+ems are based upon the parent elements value.
+
+rems are based upon the root elements value.
