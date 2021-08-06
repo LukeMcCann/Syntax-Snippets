@@ -4,9 +4,13 @@
 
 public class BitCounting {
 
-	public static int countBits(int n){
+	public static int countIntegerBitsStringified(int n) {
 		String bin = Integer.toBinaryString(n).replaceAll("0", "");
-    return bin.length();
+    		return bin.length();
+	}
+	
+	public static int countIntegerBits(int n) {
+	    return Integer.bitCount(n);
 	}
 	
 }
