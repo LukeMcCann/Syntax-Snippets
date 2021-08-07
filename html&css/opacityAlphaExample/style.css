@@ -1,0 +1,38 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    border: solid 1px black;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(22, 219, 111, 1);
+}
+
+#opacity {
+    border: solid 1px black;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(22, 219, 111);
+    opacity: 1;
+}
+
+#rgba:hover {
+    cursor: crosshair;
+    background-color: rgba(22, 219, 111, 0.25);
+}
+
+#opacity:hover {
+    cursor: crosshair;
+    opacity: .25;
+}
