@@ -8,6 +8,10 @@ Snippets of syntax reminders for various languages:
 - JavaScript
 - C++
 
+# CSS
+
+- Transitions
+  - https://easings.net/
 
 # Python Cheatsheets
 
