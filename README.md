@@ -28,3 +28,6 @@ https://codeofaninja.com/2014/06/php-object-oriented-crud-example-oop.html
 
 - Images
   - https://unsplash.com/
+
+- Fonts
+  - https://fonts.google.com/
