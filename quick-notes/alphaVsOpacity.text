@@ -1,0 +1,6 @@
+The alpha channel on RGBA only affects the property it is applied to.
+Any other properties remain unaffected.
+
+Whilst opacity affects all of the properties on the element. This is because
+rather than being set on a property, opacity is a property itself. Therefore
+it govenrs the transparency of the entire element to which it is applied.
