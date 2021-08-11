@@ -62,6 +62,10 @@ h1 {
 }
 
 #container div {
+    /*
+        align-self: center; 
+        align-self: flex-end;
+    */
     width: 200px;
     height: 200px;
 }
