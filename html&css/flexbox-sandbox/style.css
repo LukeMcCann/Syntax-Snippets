@@ -15,6 +15,22 @@ h1 {
         flex-direction: row-reverse;
     */
 
+    /*
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+        flex-wrap: no-wrap;
+    */
+
+    /** align items distributes space along the
+        cross (secondary) axis, whilst justify-content distributes
+        space along the main (primary) axis */
+
+    /*
+        align-items: flex-end;
+        align-items: flex-start;
+        align-items: center;
+    */
+
     background-color: #003049;
     width: 90%;
     height: 500px;
