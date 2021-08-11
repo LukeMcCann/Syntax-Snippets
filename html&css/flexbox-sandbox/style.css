@@ -7,21 +7,35 @@ h1 {
 }
 
 #container {
-/*     display: flex; */
+    display: flex;
     /* 
         flex-direction: row;
         flex-direction: column;
         flex-direction: column-reverse; 
         flex-direction: row-reverse;
     */
+
     background-color: #003049;
     width: 90%;
     height: 500px;
     margin: 0 auto;
     border: 5px solid #003049;
+
+    /** Justify content works on the main axis
+        this is dependent on what we set out main 
+        axis to using flex-direction **/
+
+    /*
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-evenly;
+        justify-content: space-around;
+    */
 }
 
-/* #container div {
+#container div {
     width: 200px;
     height: 200px;
-} */
+}
