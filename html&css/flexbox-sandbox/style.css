@@ -68,4 +68,8 @@ h1 {
     */
     width: 200px;
     height: 200px;
+    
+    flex-basis: 400px; /* initial size of element */
+    flex-grow: 200px; /* the amount of space the element takes up if there is additional space */
+    flex-shrink: 200px;
 }
