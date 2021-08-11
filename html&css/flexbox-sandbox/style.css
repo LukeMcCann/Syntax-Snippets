@@ -8,6 +8,7 @@ h1 {
 
 #container {
     display: flex;
+
     /* 
         flex-direction: row;
         flex-direction: column;
@@ -29,6 +30,15 @@ h1 {
         align-items: flex-end;
         align-items: flex-start;
         align-items: center;
+    */
+
+    /** align-content distributes space along 
+        multi line flexboxes. It has no effect when
+        items are in a single line **/
+
+    /* 
+        align-content: space-around; 
+        align-content: flex-start;
     */
 
     background-color: #003049;
