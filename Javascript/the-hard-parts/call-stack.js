@@ -30,6 +30,13 @@
 // we can have similarly named variables in the global execution context
 // which we may reference indirectly. 
 
+// It is important to note that we cannot access counter once we export the function,
+// counter is only available in the execution context (scope) of 
+// the function where it is declared. Whilst it is exported with 
+// the function as a permanent record, there is no way
+// of accessing the Scope property on the function. The only way to 
+// access this data is by running the function.
+
 // let counter = 0;
 function outer() {
     let counter = 0;
