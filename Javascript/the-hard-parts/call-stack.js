@@ -37,6 +37,11 @@
 // of accessing the Scope property on the function. The only way to 
 // access this data is by running the function.
 
+// This 'backpack' of data can contain anything, even other code,
+// and is what we refer to as a C.O.V.E (closed over environment variable), 
+// a P.L.S.R.D (persistent lexical scope referenced data), or more commonly,
+// a "closure". 
+
 // let counter = 0;
 function outer() {
     let counter = 0;
