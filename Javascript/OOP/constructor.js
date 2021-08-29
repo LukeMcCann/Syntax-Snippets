@@ -23,6 +23,16 @@
 // "this" context, finally, if the object doesn;t return it's own
 // object "this" is returned.
 
+// When we use ES6 class syntax, it is important to understand that under the hood,
+// JS is not using inheritance by the same means. It still functions
+// via prototypal inheritance on the prototype chain (arguably a more powerful form
+// of inheritance than traditional inheritance). 
+
+// As such, whenever you extend a "class" in JS picture it as 
+// creating a new child object from the parents protoype.
+//
+// Child.prototype = Object.create(Parent.prototype);
+
 function Color(r,g,b) {
     this.r = r;
     this.g = g;
