@@ -3,7 +3,7 @@
 // Since functions in JS are objects, this includes adding functions
 // to our protoypes.
 
-// It is worth noting that we are adding this to the Prototype object, accessed via __proto__ which 
+// It is worth noting that we are adding this to the Prototype object, accessed via the __proto__ reference which 
 // every object has access to. We are not defining this on the array object. This means any item which
 // has access to this prototype chain will have access to the method we define. 
 
