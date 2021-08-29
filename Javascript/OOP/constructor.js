@@ -16,6 +16,13 @@
 // is nothing more than syntactic sugar, JS sees this and creates a 
 // constructor function and prototypal methods behind the scenes.
 
+// When we use the new keyword 4 steps are performed by JS.
+// Firstly, JS creates a new play JS object, then it links
+// the constructor of this object to another object t which 
+// it passes the newly created object from the first step as the
+// "this" context, finally, if the object doesn;t return it's own
+// object "this" is returned.
+
 function Color(r,g,b) {
     this.r = r;
     this.g = g;
