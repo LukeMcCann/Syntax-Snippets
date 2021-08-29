@@ -34,8 +34,14 @@ Color.prototype.rgb = function() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+Color.prototype.hex = function () {
+    const {r, g, b} = this;
+    return '#' + ((1 << 24) + (r << 16) + (g << 8).toString(16).slice(1));
+ }
+
 let red = new Color(255, 0, 0);
 
 console.dir(red);
 
 red.rgb();
+
