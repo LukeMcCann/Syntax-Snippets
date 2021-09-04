@@ -86,7 +86,10 @@ Movie.insertMany([
 // Movie.find({year: {$lt: 2000}}).then(data => console.log(data));
 
 // Movies after 2000
-Movie.find({year: {$gt: 2000}}).then(data => console.log(data));
+// Movie.find({year: {$gt: 2000}}).then(data => console.log(data));
+
+// Movie Named Avengers Endgame
+Movie.findOne({title: 'Avengers Endgame'}).then(data => console.log(data));
 
 // async function findAllMovies() {
 //     return await Movie.find({}).then(data => data);
