@@ -54,6 +54,12 @@ Alien.save();
 TheMatrix.save();
 
 // We can also insert multiple 
+// This method takes time, therefore is run
+// as an asynchronous function. If we 
+// check the value of this function
+// we receive a promise which either resolves
+// to the raw result from mongo, or the documents
+// which passed validation.
 Movie.insertMany([
     { title: 'Iron Man', year: 2008, score: 7.2, rating: 'PG-13'},
     { title: 'Hulk', year: 2003, score: 5.2, rating: 'PG-13'},
