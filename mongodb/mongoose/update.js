@@ -67,5 +67,7 @@ Movie.insertMany([
     { title: 'Doctor Strange', year: 2016, score: 4, rating: 'PG-13'},
     { title: 'Guardians of The Galaxy Vol. 2', year: 2016, score: 10, rating: 'PG-13'},
     { title: 'Joker', year: 2019, score: 10, rating: '15'}
-]);
+])
+.then(data => console.log(data))
+.catch(err => console.log(err));
 
