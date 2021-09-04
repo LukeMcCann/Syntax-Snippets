@@ -1,0 +1,14 @@
+MongoDB is a NoSQL database. 
+
+There are many databases under this category which differ in many different ways.
+MongoDB is what is known as a document datastore. This means that unlike traditional Relational 
+table-based databases (MySQL, Postgres, etc...) we store data in a format more similar to that of  how we
+would store data in a JSON file. Other types of database include concepts such as Neo4JS graph based 
+database, this is an interesting one if you are intrigued in storing semantic information for an AI
+or Machine Learning program.
+
+MongoDB may look like JSON, however, JSON is incredibly slow to parse due to being a text-based language.
+This is not ideal if you want to have a quick and efficient database, enter BSON. BSON is a simple enough
+concept, it is a language similar in syntax to JSON, but instead stored as a binary representation. Because
+of this BSON takes up much less space in memory than JSON, is faster to parse, and therefore search, and 
+enables us to use JSON format effectively to read and write data to and from our persistent data storage.
