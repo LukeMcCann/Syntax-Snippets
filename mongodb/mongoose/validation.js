@@ -14,10 +14,11 @@ mongoose.connect(`mongodb://localhost:27017/${collectionName}`, options)
 
 // Using longhand syntax we can set validations on our schemas to ensure that
 // certain model fields are required or adhere to any other rules we want to enforce.
+// We can also set custom error messages on our schema.
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true 
+        required: [true, 'The name is a required field!'],
     },
     price: {
         type: Number,
