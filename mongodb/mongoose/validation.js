@@ -43,6 +43,6 @@ bike.save()
 
 // We can apply these same validations when updating objects, they do not apply by default, 
 // by setting runValidators to true in our update method call
-Product.findOneAndUpdate({ name: 'Mountain Bike'}, { price: 700 }, { new: true }, { runeValidators: true })
+Product.findOneAndUpdate({ name: 'Mountain Bike'}, { price: 700 }, { new: true }, { runValidators: true })
     .then(p => console.log(p))
     .catch(err => console.log(err));
