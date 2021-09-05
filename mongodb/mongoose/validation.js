@@ -40,3 +40,9 @@ const bike = new Product({ name: 'Mountain Bike', price: 800 });
 bike.save()
     .then(data => console.log(`Successfully Inserted: \n ${data}`))
     .catch(err => console.log(err));
+
+// We can apply these same validations when updating objects, they do not apply by default, 
+// by setting runValidators to true in our update method call
+Product.findOneAndUpdate({ name: 'Mountain Bike'}, { price: 700 }, { new: true }, { runeValidators: true })
+    .then(p => console.log(p))
+    .catch(err => console.log(err));
