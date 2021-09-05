@@ -53,4 +53,12 @@ UP.save();
 
 // Finally, we can delete models, note that just like update, the object deleted is
 // not returned, just the count of the deleted objects. 
-Movie.remove({ title: 'UP' }).then(res => console.log(res));
+// Movie.remove({ title: 'UP' }).then(res => console.log(res));
+
+// Remove is deprecated in later versions of mongo and we should use deleteOne or deleteMany
+// instead.
+Movie.deleteOne({ rating: 'U' }).then(res => console.log(res));
+
+// We also have find methods like we do for update. This will
+// return the actual object we have deleted.
+Movie.findOneAndDelete( {title: 'Alien' }).then(m => console.log(m));
