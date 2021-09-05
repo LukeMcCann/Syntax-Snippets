@@ -14,7 +14,7 @@ mongoose.connect(`mongodb://localhost:27017/${collectionName}`, options)
 
 // Using longhand syntax we can set validations on our schemas to ensure that
 // certain model fields are required or adhere to any other rules we want to enforce.
-// We can also set custom error messages on our schema.
+// We can also set custom error messages on our schema. Enums may also be declared.
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -23,7 +23,12 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true, 
-    }
+    },
+    condition: {
+        type: String, 
+        enum: [['A', 'B', 'C', 'D'], 'Must be an enum of a specific value!'],
+        require: true
+    },
 });
 
 const Product = mongoose.model('Product', productSchema);
