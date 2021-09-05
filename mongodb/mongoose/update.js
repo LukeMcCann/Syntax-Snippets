@@ -62,3 +62,12 @@ Movie.updateMany(
 .then(res => console.log(res));
 
 // We also have many findByAndUpdate methods for updating specific items
+
+// Model methods will return the object 
+Movie.findOneAndUpdate({ title: 'Hulk' }, { score: 7.0, rating: 'R' })
+.then(m => console.log(m));
+
+// If we wish to return the model after the update was applied we must also pass the new
+// flag set to true.
+Movie.findOneAndUpdate({ title: 'Hulk' }, {score: 9.0, rating: 'R'}, {new: true})
+.then(m => console.log(m));
