@@ -61,3 +61,29 @@ Laravel therefore instantiates Example. Next, it reads the constructor arguments
 It sees Collaborator being injected into Example. As Collaborator is a dependency of Example, 
 Example is unable to be instantiated wihtout it, therefore Laravel checks the Collaborator. 
 If the class can be instantiated, it will then instantiate a Collaborator.
+
+allternatively, rather than using the resolve() helper you can also call the make function on
+the app() instance which will provide the same result: app()->make(App\Example::class);
+
+Laravel will implicitly call the resolve method each time we ask for a dependency in the
+same manner.
+
+// Route::get('/' function (App\Example $example) { ddd($example); });
+
+If there is an issue with a dependency, you will receive BindingResolutionException
+This exception is Laravel saying:
+  "I am trying to help you out here, but I don't know what type this dependency is, and there is no class associated"
+In this situration you would need to go back and ensure explicit typing/binding, usually performed within a ServiceProvider. 
+
+
+The important takeaway here is the order of operations:
+
+WHEN: We request a dependency wihtin our Controller
+FIRST: Laravel will check if we have a matching type in the bindings array
+IF: Laravel does not find a matching key in bindings
+THEN: it will check if there is a class matching the injected item
+IF: There is a class, then Laravel will build that class automatically
+
+We would usually register our services in the services container. This means we perform all of our
+bindings for explicit dependencies within our register function in AppServiceProvider or a derivitive provider.
+Finally, on any provider we have access to app() via the specific provider instance: $this->app->bind()
