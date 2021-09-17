@@ -1,12 +1,63 @@
 Laravel Service Container
 --------------------------
 
-Bedrock of the entire Framework
+The service container is the bedrock of the entire Framework.
 
 A ServiceContainer is just what it sounds like: a container for services.
 It is a repository for which to store and retrieve "services". A service
 may be any kind of data: String, Object, Collection etc...
 
-
 To store things wihtin the container we use the bind() method provided by Laravel.
 This method takes a $key, and some data to associate with the $key.
+
+It is important to realise that Laravel's ServiceContainer is actually the application
+itself, which can be accessed via the app() helper function. 
+
+// app()->bind('hello', function () { return 'Hello World'; });
+
+We usually use the service container to instantiate dependencies for dependency injection. 
+
+// app()->bind('example', function () { return new Example });
+
+Instantiation can sometimes be more complex than simply creating a new object instance,
+for instance, in some cases we may need to create multiple objects beforehand that 
+this object is dependent upon. 
+
+The bind method simply adds our binding to the ServiceContainers bindings array. 
+This is essentually adding an item to our repoistory. 
+
+If we want to resolve our callback, we can do so by calling the resolve method on the container,
+passing the key we want to access. 
+
+// $example = resolve('example');
+
+In servives.php we set up the config for our objects. A problem with dependency injection
+is how you need to know exactly what classes to instantiate an object, the ServiceContainer
+aims to solve this. This means we can store our config in one of our config files by simply
+returning an array. 
+
+// return [ 'config' => 'config_example' ];
+
+we can then read this config prior to instantiation within our callback function.
+
+// app()->bind('example', function () {
+//  $config = config('services.config');
+// });
+
+Laravel can also resolve bindings using some behind the scenes magic: 
+// $example = resolve(App\Exmaple::class);
+
+This is due to how Laravel handles abstract and concrete classes prior to resolving. 
+You can see this in the Container.php how the abstract is checked against a concrete
+implementation. Laravel will also inject any additional dependencies passed.
+
+For example: if we had a class Example which I dependency injected a class Collaborator,
+Laravel will instantly resolve both the example and collaborator correctly, even without
+manual binding. 
+
+Laravel does this by first checking the passed key in its container. In this case it looks
+and finds nothing. It next checks if the passed key is a class, in this case it is. 
+Laravel therefore instantiates Example. Next, it reads the constructor arguments in Example.
+It sees Collaborator being injected into Example. As Collaborator is a dependency of Example, 
+Example is unable to be instantiated wihtout it, therefore Laravel checks the Collaborator. 
+If the class can be instantiated, it will then instantiate a Collaborator.
