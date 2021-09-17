@@ -8,5 +8,7 @@ Route::get('/' function () {
     return new \App\Example();
   });
   
+  $example = $container->resolve('example');
+
   ddd($container);
 });
