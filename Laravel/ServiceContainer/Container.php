@@ -2,9 +2,10 @@
 
 namespace App;
 
-protected $bindings = [];
-
 class Container {
+  
+  protected $bindings = [];
+  
   public function bind($key, $value) {
      $this->bindings($key) = $value;
   }
