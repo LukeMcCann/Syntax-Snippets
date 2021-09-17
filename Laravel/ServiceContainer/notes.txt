@@ -1,0 +1,12 @@
+Laravel Service Container
+--------------------------
+
+Bedrock of the entire Framework
+
+A ServiceContainer is just what it sounds like: a container for services.
+It is a repository for which to store and retrieve "services". A service
+may be any kind of data: String, Object, Collection etc...
+
+
+To store things wihtin the container we use the bind() method provided by Laravel.
+This method takes a $key, and some data to associate with the $key.
