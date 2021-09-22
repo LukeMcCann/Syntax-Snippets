@@ -1,11 +1,11 @@
 <?php
 
 function pretty_print_arrays(...$arrays) {
-    $letter = "a";
+    $prefix = "a";
     foreach ($arrays as $array) {
-        echo $letter . ": ";
+        echo $prefix . ": ";
         print_r($array);
         echo "\n";
-        $letter++;
+        $prefix++;
     }
 }
