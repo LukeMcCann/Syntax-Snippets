@@ -1,3 +1,6 @@
+Complete the function/method (depending on the language) to return true/True when its argument 
+is an array that has the same nesting structures and same corresponding length of nested arrays as the first array.
+
 <?php
 
 function same_structure_as($a, $b) : bool {
@@ -19,11 +22,21 @@ function calculate_structure_points(array $array, int $current_points = 0) {
         }
         
         if (gettype($value) === gettype(array())) {
-            $current_points++;
+            $current_points += $pointer+1;
             $current_points += calculate_structure_points($value, $current_points);
         }
     }
+    return $current_points;
 }
 
-echo "Result: ";
-echo same_structure_as([1, [1, 1]], [2, [2, 3]]) ? 'true' : 'false';
+
+final class SameStructureAsTest extends TestCase {
+  public function testDescriptionExamples() {
+    $this->assertTrue(same_structure_as([1, 1, 1], [2, 2, 2]));
+    $this->assertTrue(same_structure_as([1, [1, 1]], [2, [2, 2]]));
+    $this->assertFalse(same_structure_as([1, [1, 1]], [[2, 2], 2]));
+    $this->assertFalse(same_structure_as([1, [1, 1]], [[2], 2]));
+    $this->assertTrue(same_structure_as([[[], []]], [[[], []]]));
+    $this->assertFalse(same_structure_as([[[], []]], [[1, 1]]));
+  }
+}
