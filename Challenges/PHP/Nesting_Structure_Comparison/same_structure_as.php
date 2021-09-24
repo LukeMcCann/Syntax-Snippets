@@ -3,7 +3,7 @@ is an array that has the same nesting structures and same corresponding length o
 
 <?php
 
-function same_structure_as($a, $b) : bool {
+function same_structure_as(array $a, array $b) : bool {
     $a_comparative = calculate_structure_points($a);
     $b_comparative = calculate_structure_points($b);
     return boolval($a_comparative === $b_comparative); 
