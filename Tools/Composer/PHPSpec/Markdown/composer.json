@@ -1,0 +1,19 @@
+{
+    "name": "luke/php",
+    "description": "PHPSpec Sandbox",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Luke McCann",
+            "email": "developer-lukemccann@outlook.com"
+        }
+    ],
+    "require-dev": {
+        "phpspec/phpspec": "^6.2"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {},
+    "autoload": {"psr-4": {"Markdown\\": "src/"}}
+}
