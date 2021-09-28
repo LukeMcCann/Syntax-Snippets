@@ -1,0 +1,5 @@
+suites:
+  php_suite:
+    namespace: Markdown
+    psr4_prefix: Markdown
+    src_path: src/Markdown
