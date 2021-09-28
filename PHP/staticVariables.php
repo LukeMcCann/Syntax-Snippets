@@ -1,5 +1,9 @@
 <?php 
 
+// Static variables can be
+// useful for caching expensive
+// function calls.
+
 function getValue() {
     static $value = null;
 
