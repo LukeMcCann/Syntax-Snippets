@@ -1,0 +1,14 @@
+Package.json important items
+
+"browserslist": [
+    // array of supported browsers
+    "chrome>=70",
+    "defaults",
+]
+
+babel
+parcel.js
+prettier
+eslint
+storybook
+axios
