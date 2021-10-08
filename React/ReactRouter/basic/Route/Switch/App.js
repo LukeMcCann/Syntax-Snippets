@@ -40,6 +40,12 @@ export default function BasicExample() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
+
+        // In this instance since the Switch is matching "/"
+        // as the Home Route, if we remove exact from this
+        // every path would render the Home component.
+        // This is due to the switch stopping when
+        // it finds the first match in it's child components.
         <Switch>
           <Route exact path="/">
             <Home />
