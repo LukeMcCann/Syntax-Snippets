@@ -23,3 +23,6 @@ $request->headers->get('content-type');
 
 $request->getMethod();    // GET, POST, PUT, DELETE, HEAD
 $request->getLanguages(); // an array of languages the client accepts
+
+// Simulate Request
+$request = Request::create('/index.php?name=Martin');
