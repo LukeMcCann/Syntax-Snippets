@@ -1,0 +1,27 @@
+{
+    "name": "framework/framework",
+    "description": "PHP Framework.",
+    "type": "project",
+    "require": {
+    },
+    "require-dev": {
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SiglaMeo\\": "src/SiglaMeo"
+        },
+        "classmap": ["src/"]
+    },
+    "authors": [
+        {
+            "name": "LukeMcCann",
+            "email": "developer-lukemccann@outlook.com"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "lukemccann/phpproject",
+    "description": "Lets see what we can do",
+    "keywords": ["framework"],
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "LukeMcCann",
+            "email": "developer-lukemccann@outlook.com"
+        }
+    ],
+    "require": {
+        "wikimedia/composer-merge-plugin": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "merge-plugin": {
+            "require": [
+                "framework/composer.json"
+            ],
+            "replace": true
+        }
+    }
+}
