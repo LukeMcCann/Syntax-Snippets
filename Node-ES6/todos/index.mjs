@@ -23,7 +23,13 @@ app.post('/todo', (req, res) => {
 
     db.push(newTodo);
 
+    res.status(201);
     res.json(newTodo);
+});
+
+app.get('/todo/:id', (req, res) => {
+    const todo = todos.find(t => t.id === req.params.id);
+    res.json({data: todo});
 });
 
 app.get('/todo', (req, res) => {
