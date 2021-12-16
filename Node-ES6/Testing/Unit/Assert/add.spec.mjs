@@ -1,4 +1,4 @@
-import { add } from './myLib.mjs';
+import { add } from './index.mjs';
 import assert from 'assert';
 
 console.log('add() : Should add two numbers');
