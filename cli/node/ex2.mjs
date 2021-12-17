@@ -7,6 +7,7 @@ import fs from 'fs';
 import path, { dirname } from 'path';
 import util from 'util';
 import { fileURLToPath } from 'url';
+import { Transform } from 'stream';
 
 const args = minimist(process.argv.slice(2), {
     boolean: [ "help", "in"], 
@@ -52,7 +53,32 @@ function printHelp() {
 }
 
 function processFile(inStream) {
-    const outStream = inStream;
+    let outStream;
+
+    // Here we step in between our streams
+    // to do something transformative with
+    // our data, we run the transform function
+    // which works similar to an array. 
+    // we ush our chunk through our transform, 
+    // remembering that at this point it is binary
+    // data (a buffer) and we need to convert it
+    // to a string. We then upperCase our string,
+    // and run our callBack (next). 
+    const upperStream = new Transform({
+        transform(chunk, encoding, next) {
+            this.push(
+                chunk.toString().toUpperCase(),
+            );
+            next();
+        },
+    });
+
+    // We then pipe our readable stream 
+    // into our writeable, this returns
+    // a new readable stream which is
+    // our output stream.
+    outStream = inStream.pipe(upperStream);
+
     const targetStream = process.stdout;
     outStream.pipe(targetStream);
 }
