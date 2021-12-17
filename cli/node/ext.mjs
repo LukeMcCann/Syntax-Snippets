@@ -5,22 +5,33 @@
 import minimist from 'minimist';
 import fs from 'fs';
 import path from 'path';
+import getStdin from 'get-stdin';
+import util from 'util';
 
 const args = minimist(process.argv.slice(2), {
-    boolean: [ "help" ], // help will always be treated as boolean
-    string: [ "file" ], // Anything in the file list is always considered a string
-    string: [ "out" ]
+    boolean: [ "help", "in"], // help will always be treated as boolean
+    string: [ "file", "out" ], // Anything in the file list is always considered a string
 });
 
 if (args.help) {
     printHelp();
 }
 else if (args.file) {
-    const filepath = path.resolve(args.file);
-    processFile(filepath);
+    fs.readFile(path.resolve(args.file), (err, content) => {
+        if (err) {
+            error(err.toString());
+        } else {
+            processFile(content.toString());
+        }
+    });
 }
 else if (args.out) {
     console.log(args.out);
+}
+else if (args.in || args._.includes("-")) {
+    getStdin()
+        .then(processFile)
+        .catch(error);
 }
 else {
     error('Incorrect usage.', true);
@@ -28,18 +39,9 @@ else {
 
 // **************************************************
 
-function processFile(filepath) {
-    const content = fs.readFile(filepath, (err, content) => {
-        if (err) {
-            error(err.toString());
-        } else {
-            process.stdout.write(content); // passes a buffer to stdout
-            // in this case it is better to use
-            // process.stdout as we don't want
-            // the overhead console.log(provides)
-            // to convert the buffer to a value.
-        }
-    });
+function processFile(content) {
+    content = content.toUpperCase();
+    process.stdout.write(content);
 }
 
 function error(msg, getHelp = false) {
@@ -58,6 +60,7 @@ function printHelp() {
     console.log('');
     console.log('--help                  print this help');
     console.log('--file={FILENAME}       process the file');
-    console.log('--out={INPUT}          print to standard output');
+    console.log('--out={INPUT}           print to standard output');
+    console.log('--in, -                 process stdin');
     console.log('');
 }
