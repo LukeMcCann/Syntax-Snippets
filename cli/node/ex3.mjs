@@ -13,7 +13,7 @@ import util from 'util';
 import zlib from 'zlib';
 
 const args = minimist(process.argv.slice(2), {
-    boolean: [ "help", "in", "out", "compress"], 
+    boolean: [ "help", "in", "out", "compress", "decompress"], 
     string: [ "file" ],
 });
 
@@ -53,13 +53,20 @@ function printHelp() {
     console.log('--in, -                 process stdin');
     console.log('--out                   print to stdout');
     console.log('--compress              gzip the output');
+    console.log('--decompress              unzip gzip input');
     console.log('');
 }
 
-function processFile(inStream) {
+function processFile(inputStream) {
+    let stream = inputStream;
     let outStream;
 
-    const upperStream = new Transform({
+    if (args.decompress) {
+        let gunzipStream = zlib.createGunzip();
+        stream = stream.pipe(gunzipStream);
+    }
+
+    const upperCaseStream = new Transform({
         transform(chunk, encoding, next) {
             this.push(
                 chunk.toString().toUpperCase(),
@@ -68,23 +75,20 @@ function processFile(inStream) {
         },
     });
 
-    outStream = inStream.pipe(upperStream);
-
+    stream = stream.pipe(upperCaseStream);
 
     if (args.compress) {
-        const gzipStream = zlib.createGzip();
-        outStream = outStream.pipe(gzipStream);
         OUTFILE = `${OUTFILE}.gz`;
+        const gzipStream = zlib.createGzip();
+        stream = stream.pipe(gzipStream);
     }
-
-    let targetStream;
 
     if (args.out) {
-        targetStream = process.stdout;
+        outStream = process.stdout;
     } else {
-        targetStream = fs.createWriteStream(OUTFILE);
+        outStream = fs.createWriteStream(OUTFILE);
     }
-    outStream.pipe(targetStream);
+    stream.pipe(outStream);
 }
 
 function error(msg, getHelp = false) {
