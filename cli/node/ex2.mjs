@@ -10,14 +10,17 @@ import { fileURLToPath } from 'url';
 import { Transform } from 'stream';
 
 const args = minimist(process.argv.slice(2), {
-    boolean: [ "help", "in"], 
-    string: [ "file", "out" ],
+    boolean: [ "help", "in", "out"], 
+    string: [ "file" ],
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const BASEPATH =
 	path.resolve(process.env.BASEPATH || __dirname);
+
+const OUTFILE = 
+    path.join(BASEPATH, "out.txt");
 
 if (args.help || process.argv.length <= 2) {
 	error(null,/*showHelp=*/true);
@@ -30,9 +33,6 @@ else if (args.file) {
     processFile(
         fs.createReadStream(filePath),
     );
-}
-else if (args.out) {
-    console.log(args.out);
 }
 else {
 	error("Usage incorrect.",/*showHelp=*/true);
@@ -47,8 +47,8 @@ function printHelp() {
     console.log('');
     console.log('--help                  print this help');
     console.log('--file={FILENAME}       process the file');
-    console.log('--out={INPUT}           print to standard output');
     console.log('--in, -                 process stdin');
+    console.log('--out                   print to stdout');
     console.log('');
 }
 
@@ -69,6 +69,9 @@ function processFile(inStream) {
             this.push(
                 chunk.toString().toUpperCase(),
             );
+            // Uncomment to delay - you will see how 
+            // we are processing our data chunk by chunk
+            // setTimeout(next, 500);
             next();
         },
     });
@@ -79,7 +82,13 @@ function processFile(inStream) {
     // our output stream.
     outStream = inStream.pipe(upperStream);
 
-    const targetStream = process.stdout;
+    let targetStream;
+
+    if (args.out) {
+        targetStream = process.stdout;
+    } else {
+        targetStream = fs.createWriteStream(OUTFILE);
+    }
     outStream.pipe(targetStream);
 }
 
