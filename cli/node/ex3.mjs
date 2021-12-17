@@ -44,9 +44,9 @@ else {
 // **************************************************
 
 function printHelp() {
-    console.log('ex1 usage:');
-    console.log('   ex1.js --help');
-    console.log('   ex1.js --file={FILENAME}');
+    console.log('ex3 usage:');
+    console.log('   ex3.js --help');
+    console.log('   ex3.js --file={FILENAME}');
     console.log('');
     console.log('--help                  print this help');
     console.log('--file={FILENAME}       process the file');
