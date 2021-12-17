@@ -29,12 +29,17 @@ else {
 // **************************************************
 
 function processFile(filepath) {
-    const content = fs.readFileSync(filepath);
-    process.stdout.write(content); // passes a buffer to stdout
-                                   // in this case it is better to use
-                                   // process.stdout as we don't want
-                                   // the overhead console.log(provides)
-                                   // to convert the buffer to a value.
+    const content = fs.readFile(filepath, (err, content) => {
+        if (err) {
+            error(err.toString());
+        } else {
+            process.stdout.write(content); // passes a buffer to stdout
+            // in this case it is better to use
+            // process.stdout as we don't want
+            // the overhead console.log(provides)
+            // to convert the buffer to a value.
+        }
+    });
 }
 
 function error(msg, getHelp = false) {
