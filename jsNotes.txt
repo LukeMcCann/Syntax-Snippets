@@ -1,0 +1,5 @@
+Arrow functions are lexically scoped by default.
+
+This means that the value of "this" is determined by where the funciton
+was declared. If we declare a function inside of a function where
+this = user1 then the value of this is user1. 
