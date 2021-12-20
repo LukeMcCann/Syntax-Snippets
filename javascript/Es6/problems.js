@@ -53,3 +53,15 @@ objCreator.prototype.myFunction = function () { // do stuff };
 // It is important to remember that whilst we do not often talk about it
 // functions in JS are not merely functions, they are also objects
 // they are a bundle of a function/object which we can interact with using dot  notation.
+
+
+// This leads to some interesting problems. 
+// In the example at the top of this page
+// we show a successful creation using the new keyword.
+    
+// However, should we forget to use the new keyword, 
+// calling our function without telling JS to first automate
+// these processes, then we end up with out "this" label
+// pointing to the global object. This means fred
+// becomes a value of the name property on global rather than
+// the fred object. 
