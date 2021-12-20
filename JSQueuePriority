@@ -1,0 +1,17 @@
+JS Queue Priority
+
+0) Microtask Queues - 
+	(a) && (b)
+		- These are checked between evert queue call 
+
+1) Timer Queue 
+
+2) I/O Queue
+
+3) Check Queue 
+
+4) Close Handle Queue 
+
+
+
+
