@@ -65,3 +65,11 @@ objCreator.prototype.myFunction = function () { // do stuff };
 // pointing to the global object. This means fred
 // becomes a value of the name property on global rather than
 // the fred object. 
+
+// To avoid this issue, developers capitalise the first letter of a function
+// this denotes that the function requires a new keyword. 
+
+// The class syntactic sugar was later created to clean up this process
+// However, as we touched on previously, this can be confusing to developers
+// new to the language, and it should be remembered that under the hood
+// JS behaves the same way. 
