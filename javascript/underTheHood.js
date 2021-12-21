@@ -237,3 +237,61 @@ user1.sayName();
 
 // We check this and find out function, if we don't the chain goes on
 // until we either reach Object.sayName or Object.null 
+
+
+// Lastly, we want to tackle inheritance.
+
+function paidUserCreator extends userCreator {
+    constructor(paidName, paidScore, accountBalance) {
+        super(paidName, paidScore);
+        this.accountBalance = accountBalance; 
+    }
+    
+    increaseBalance() {
+        this.accountBalance++;
+    }
+}
+
+paidUser1 = new paidUseCreator('Alyssa', 8, 25);
+
+paidUser1.sayName();
+
+// Here we use the extends keyword. 
+
+// Under the hood this functions much the same as what we have already seen.
+
+// We begin creating our object function pair paidUserCreator. 
+// Our constructor is still just this function that we run 
+// applying parenthesese. 
+
+// The object proportion of paidUserCreator still contains the prototype object.
+//                     paidUserCreator: { prototype: { increaseBalance } } 
+
+// So far this works exactly the same as we have already seen.
+// So what does extends do?
+
+// The first thing extends does is set __proto__ as a reference up to the 
+// object specified on the right hand side. In  this case, it would reference
+// the prototype object on userCreator (userCreator.prototype).
+
+// Secondly, extends uses super() to run the userCreator constructor. 
+// Rather than the old method, where we manipulate one layer outwards 
+// using a side effect to get our "this" values out from an inner execution
+// context, we instead create the object inside the userCreator, but with it's
+// __proto__ auto set to paidUserCreator's functions. 
+
+// Extends does this by setting the __proto__ of paidUserCreator to userCreator 
+// Normally this would link to Function.prototype, but we overwrite this here. 
+
+// When we run our userCreator function our parameters get saved to the 
+// local memory of the execution context as we normally do. 
+
+// However, when new sets up our "this" object, it is instead ininitialised. 
+// Immediately, we must have a super() call before we can refer to "this". 
+
+// Extends fundamentally affects at this point where the object we refer to in "this"
+// is born. In this case it is not born in paidUserCreator but in the parent userCreator 
+// context. 
+
+// This is then automatically returned out of the inner execution context and assigned to
+// our uninitialsed "this", thus avoiding side effects. 
