@@ -135,3 +135,62 @@ paidUser1.sayName();
 
 // We can then add our new properties, and create our paidUserFunctions
 // and add those as a reference to the prototype chain. 
+
+
+// When we use the NEW keyword we essentially tell JS
+// to automate this setup for us.
+
+function userCreator(name, score) {
+    this.name = name;
+    this.score = score; 
+}
+
+userCreator.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+const userX = new userCreator('Martin', 1);
+
+userX.sayName();
+
+// As mentioned prior, do not get confused here, 
+// this is not creating a new instance
+// as you would expect in other languages. 
+
+// Instead, we are doing exactly the same as in
+// the previous examples. We are creating an
+// object, assigning our functions to the
+// prototype property and returning the 
+// object into a new constant. 
+
+// Under the hood this is functionally the same, 
+// this is why we call it a syntactic sugar, 
+// it simply looks cleaner, and is easier to
+// reason about. 
+
+// the NEW keyword automates a load of things
+// we would usually do manually within the
+// functions execution context. 
+
+// First of all, it sets up the "this" keyword
+// as a new object: this: {} 
+
+// next, it sets up our default __proto__ property
+// on our object. 
+
+// and lastly, it returns our object after
+// we have set our properties from the passed
+// parameters. 
+
+// Remember, prototype is a property,
+// it is also an object within itself:
+
+// Object: { prototype: { [[functions]], create: [[function]] } } 
+// Function:: { prototype: { [[functions]], call: [[function]] } }
+
+// The __proto__ of all objects will eventually reference the parent object
+// Object in the chain. Whena  function is looked up on the prototype chain
+// we check each child down the chain in order of linkage. If we reach Object
+// and there is no property matching our lookup Object defaults it to NULL
+// which tells us we have reached the end of our chain, and there is no
+// matching function, in this case JS will throw an error.
