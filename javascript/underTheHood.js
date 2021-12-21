@@ -194,3 +194,46 @@ userX.sayName();
 // and there is no property matching our lookup Object defaults it to NULL
 // which tells us we have reached the end of our chain, and there is no
 // matching function, in this case JS will throw an error.
+
+class UserCreator {
+    constructor(name, score) {
+        this.name = name;
+        this.score = score;
+    }
+    
+    sayName() {
+        console.log(this.name);
+    }
+    
+    increment() {
+        this.score++;
+    }
+}
+
+const userY = new userCreator('Luke', 20);
+
+user1.sayName();
+
+// This is the final version of the syntax, 
+// here, we are doing exactly the same.
+
+// The UserCreator class is merely a function object pair.
+// Within the object portion of the userCreator is a prototype property: 
+//          userCreator: { prototype: { sayName, increment } } 
+// We store our functions on the prototype. 
+
+// The constructor is simply our function now, this is what we call when
+// we add paranthesese. 
+
+// When we call this we use the NEW keyword.
+// As we know this simply automates the setting of this: {} to a new object
+// creates our default __proto__ within the object and returns the object
+// after we have set our values which were passed. 
+
+// When we call sayName, we check global memory for a user1
+// if this is found we check user1 has a sayName property and call it.
+// if sayName is not found on the current object, we check __proto__
+// __proto__ points to another objects prototype property. 
+
+// We check this and find out function, if we don't the chain goes on
+// until we either reach Object.sayName or Object.null 
