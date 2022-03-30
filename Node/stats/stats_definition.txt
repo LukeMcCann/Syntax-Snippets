@@ -1,0 +1,20 @@
+Stats {
+  dev: 3598461965, // Device identifier that holds the file
+  mode: 33206, // Access permissions
+  nlink: 1, // Number of hard links
+  uid: 0, // User identifier
+  gid: 0, // Group identifier
+  rdev: 0, // Device identifier of the device file 
+  blksize: 4096, // Filesystem block size
+  ino: 1125899907035242, // Inode number
+  size: 28, // Total bytes
+  blocks: 0,// Number of 512-byte blocks allocated
+  atimeMs: 1648668864073.9834, // Last acess time in ms
+  mtimeMs: 1648668864073.9834, // Last modification time in ms
+  ctimeMs: 1648668864073.9834, // Last status change time in ms
+  birthtimeMs: 1648668854350.3875, // File creation time in ms
+  atime: 2022-03-30T19:34:24.074Z, // Last access time
+  mtime: 2022-03-30T19:34:24.074Z, // Last modification time
+  ctime: 2022-03-30T19:34:24.074Z, // Last status change time
+  birthtime: 2022-03-30T19:34:14.350Z // File creation time
+}
