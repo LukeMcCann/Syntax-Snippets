@@ -5,8 +5,12 @@ const fs = require('fs');
 const file = process.argv[2];
 
 const printMetaData = (file) =>{
-    const fileStats = fs.statSync(file);
-    console.log(fileStats);
+    try {
+        const fileStats = fs.statSync(file);
+        console.log(fileStats);
+    } catch(err) {
+        console.err("Error reading file path:". file);
+    }
 };
 
 printMetaData(file);
