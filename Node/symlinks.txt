@@ -1,0 +1,8 @@
+
+// Symbolic Links (Symlinks) are special files
+// which stores a reference to another file.
+
+// When the stat functions
+// are used on a file containing a symlink
+// the meta data we receive is that of the
+// file the symlink reference points to.
