@@ -1,0 +1,3 @@
+"outDir":  // set the output distribution directory
+"rootDir": // set the root directory, prevents entire folder structure duplication
+"noEmitOnError": true // stop files being generated when there is an error
