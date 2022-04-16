@@ -4,7 +4,7 @@ const add = (x: number, y: number) : number => {
     return x + y;
 };
 
-const printStr(str: string): void => {
+const printStr = (str: string): void => {
     console.log(str);
 }
 
