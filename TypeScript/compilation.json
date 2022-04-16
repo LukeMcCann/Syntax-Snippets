@@ -1,3 +1,13 @@
 "outDir":  // set the output distribution directory
 "rootDir": // set the root directory, prevents entire folder structure duplication
 "noEmitOnError": true // stop files being generated when there is an error
+
+// Strict Options
+
+"strict": true // enable all strict type checking
+
+
+// Individual strict options
+
+"noStictAny": true // ensures we must declare our types, prevents TS from inferring the any type
+"strictNullChecks": true // tell TS to be script with how you work with elements that may be null
