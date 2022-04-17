@@ -7,6 +7,7 @@
 // We would often use an interface in conjunction with classes to enforce a contract that the 
 // class must adhere to.
 
+// for this we would use the implements keyword
 
 interface Person {
     name: string,
