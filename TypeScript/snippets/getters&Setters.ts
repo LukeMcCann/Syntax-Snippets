@@ -1,3 +1,6 @@
+// Note that getters and setters are only available when targeting ES5 and higher.
+// command to target: tsc -t es5 ./script.ts
+
 class Department {
     protected employees: string[] = [];
 
@@ -69,3 +72,6 @@ console.log(IT);
 
 ACCOUNTS.addReport('Something broke!');
 ACCOUNTS.printReports();
+
+ACCOUNTS.addEmployee('Sandor');
+console.log(ACCOUNTS.allEmployees);
