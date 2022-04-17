@@ -1,7 +1,7 @@
 abstract class Animal {
     constructor(private readonly species: string) {}
 
-    abstract makeNoise();
+    abstract makeNoise(this: Animal) : void;
 
     get getSpecies(): string {
         return this.species;
@@ -21,7 +21,7 @@ class Cat extends Animal {
 }
 
 const tabby = new Cat('feline');
-const poodle = new Dog('canid');
+const poodle = new Dog('canid')
 
 console.log(`Tabby is of the species: ${tabby.getSpecies}`);
 console.log(`Poodle is of the species: ${poodle.getSpecies}`);
