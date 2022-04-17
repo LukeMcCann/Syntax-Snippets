@@ -11,3 +11,11 @@
 
 "noStictAny": true // ensures we must declare our types, prevents TS from inferring the any type
 "strictNullChecks": true // tell TS to be script with how you work with elements that may be null
+
+
+"lib": [
+  "dom",
+  "es6",
+  "dom.iterable",
+  "scripthost",
+] // default libraries for using the DOM
