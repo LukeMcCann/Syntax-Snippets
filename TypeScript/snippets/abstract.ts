@@ -1,7 +1,7 @@
 abstract class Animal {
     constructor(private readonly species: string) {}
 
-    makeNoise() : void {}
+    abstract makeNoise();
 
     get getSpecies(): string {
         return this.species;
