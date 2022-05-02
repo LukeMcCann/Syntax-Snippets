@@ -19,3 +19,6 @@
   "dom.iterable",
   "scripthost",
 ] // default libraries for using the DOM
+
+"target": "es2018": // set target version
+"moduleResolution": "node" // set resolve type to node
