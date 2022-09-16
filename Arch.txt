@@ -204,3 +204,17 @@ run: sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Reflector automatic mirror updates:
 https://joshtronic.com/2021/03/14/automatically-update-arch-linux-mirrors/
+
+
+
+
+# LTS Kernel
+
+umane -r
+
+Install an LTS kernel and reconfigure grub:
+sudo pacman -S linux-lts
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
+sudo pacman -Rs linux
