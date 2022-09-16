@@ -199,3 +199,8 @@ change CMDLINE_DEFAULT to splash
 
 
 run: sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
+
+# Reflector automatic mirror updates:
+https://joshtronic.com/2021/03/14/automatically-update-arch-linux-mirrors/
