@@ -1,6 +1,16 @@
 https://nouveau.freedesktop.org/CodeNames.html
 https://wiki.archlinux.org/title/PRIME#Closed-source_drivers
 
+yay Config
+https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
+
 # Installing Nvidia Drivers
 
 sudo pacman -S nvidia nvidia-utils nvidia-settings
+
+
+Since xorg v 127 the xorg config is no longer needed because the options are included in the driver directly.
+
+We do need to install nvidia-prime however
+
+sudo pacman -S nvidia-prime
