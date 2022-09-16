@@ -98,3 +98,29 @@ main changes should be stored in:
 /etc/optimus-manager/optimus-manager.conf
 
 https://github.com/Askannz/optimus-manager/wiki/A-guide--to-power-management-options
+
+
+
+# enable multilib
+
+sudo vin /etc/pacman.conf
+
+uncomment multilib
+
+sudo pacman -Syy
+
+
+
+# Install Brave
+
+yay -Sy brave 
+
+
+# Install Steam
+
+pacman -Sy steam
+
+
+# Install Docker
+
+pacman -Sy docker
