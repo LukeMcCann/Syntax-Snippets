@@ -79,3 +79,10 @@ or via the terminal
 optimus-manager --switch nvidia
 optimus-manager --switch intel 
 optimus-manager --switch hybrid
+
+
+# Power Management
+
+It is important to manually configure power management. Prior to this 
+the GPU will remain on and consuming power as it is disabled by default since v1.2
+we must however be careful as incorrect configuration can break the boot process.
