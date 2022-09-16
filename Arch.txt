@@ -1,0 +1,6 @@
+https://nouveau.freedesktop.org/CodeNames.html
+https://wiki.archlinux.org/title/PRIME#Closed-source_drivers
+
+# Installing Nvidia Drivers
+
+sudo pacman -S nvidia nvidia-utils nvidia-settings
