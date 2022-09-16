@@ -73,5 +73,9 @@ yay -S optimus-manager optimus-manager-qt
 
 There is also a gnome version of the widget called: optimus-manager-indicator
 
+We can then contorl our GPU via optimus-manager either within the widget
+or via the terminal
 
-
+optimus-manager --switch nvidia
+optimus-manager --switch intel 
+optimus-manager --switch hybrid
