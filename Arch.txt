@@ -151,3 +151,36 @@ yay -Sy visual-studio-code-bin
 
 https://averagelinuxuser.com/linux-terminal-color/
 https://averagelinuxuser.com/linux-terminal-color/
+
+
+
+
+
+# Mounting SSd
+
+We can mount an ssd via Mount
+
+to do so we first create a mount point
+
+mkdir /mnt/storage
+
+
+then we can mount the filesystem
+
+
+mount /dev/sda1
+
+if this fails we may need to format our filesystem
+
+mfks.ext4 /dev/sda1
+
+
+
+We can mount on boot by adding this entry to our fstab
+
+we can use blkid to derive information about our FS
+
+
+we need the UUID, the directory it is mounted to, the filesystem type,the options, and the dynp and pass
+
+UUID=231237216312637213   /mnt/storage     ext4    rw,user,auto   0 0
