@@ -1,6 +1,12 @@
 https://nouveau.freedesktop.org/CodeNames.html
 https://wiki.archlinux.org/title/PRIME#Closed-source_drivers
 
+Packages during initial install
+sudo, git, vim, base, linux, linux-firmware
+
+necessary packages
+sudo pacman -S --needed base-devel
+
 yay Config
 https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
 
