@@ -184,3 +184,18 @@ we can use blkid to derive information about our FS
 we need the UUID, the directory it is mounted to, the filesystem type,the options, and the dynp and pass
 
 UUID=231237216312637213   /mnt/storage     ext4    rw,user,auto   0 0
+
+
+
+
+
+# Quiet boot
+
+update the grub conf at: /etc/default/grub
+
+change timeout to 0 
+
+change CMDLINE_DEFAULT to splash
+
+
+run: sudo grub-mkconfig -o /boot/grub/grub.cfg
