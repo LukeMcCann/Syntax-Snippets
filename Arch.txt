@@ -1,3 +1,5 @@
+useful source: https://www.youtube.com/watch?v=jncc3QL8RWI
+
 Packages during initial install
 sudo, git, vim, base, linux, linux-firmware
 
@@ -58,4 +60,18 @@ This is a manual method doing this from the terminal.
 # Optimus
 
 https://wiki.archlinux.org/title/NVIDIA_Optimus
+
+yay -S optimus-manager
+
+We can use the optimus manager to control which GPU we use as well
+, prime-offload will let us do this on a per application basis, optimus
+can be set to use the GPU anytime we please, and also comes with a KDE widget.
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1k5eDFlRE1SQTdGMXQtUTdFczRFUlpLS0RxUXxBQ3Jtc0tsei1SbnBvb0VzWm9famYyRExoai1qNEZZVlBickNTcmVzcnBVc2h3RmZSUDFWRU03OVJmU0tBQmpic3hiVWp1MGVUY3k1cE45YWlFYXc5WmFvX3h5SnltVGhiOU41REJPRUVuM2hPNUVZaFBzei1KUQ&q=https%3A%2F%2Fgithub.com%2FAskannz%2Foptimus-manager&v=jncc3QL8RWI
+
+yay -S optimus-manager optimus-manager-qt
+
+There is also a gnome version of the widget called: optimus-manager-indicator
+
+
 
