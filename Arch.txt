@@ -7,6 +7,9 @@ sudo pacman -S --needed base-devel
 yay Config
 https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
 
+glxinfo 
+yay -S glxinfo
+
 # Installing Nvidia Drivers
 
 First we need to check which GPU we are running
@@ -39,3 +42,20 @@ sudo prime-run glxinfo | grep "OpenGL renderer"
 
 the output expected: 
 OpenGL renderer string: NVIDIA GeForce RTX 2070/PCIe/SSE2
+
+
+# Managing the GPU
+
+You can check which GPU is being used in KDE in the info centre. 
+
+For me at this point this shows my intel GPU the enxt steps will let us swap between nvidia and intel.
+
+we can switch to our Nvidia gpu using: prime-run program
+
+This is a manual method doing this from the terminal.
+
+
+# Optimus
+
+https://wiki.archlinux.org/title/NVIDIA_Optimus
+
