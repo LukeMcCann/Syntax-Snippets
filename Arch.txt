@@ -135,3 +135,12 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 logout
+
+
+
+# VSCode
+
+This version of VScode is proprietary and allows use of marketplace extensions. 
+The official arch distro does not have access to the marketplace which is VSCodes biggest strength.
+
+yay -Sy visual-studio-code-bin
