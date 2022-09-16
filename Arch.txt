@@ -144,3 +144,10 @@ This version of VScode is proprietary and allows use of marketplace extensions.
 The official arch distro does not have access to the marketplace which is VSCodes biggest strength.
 
 yay -Sy visual-studio-code-bin
+
+
+
+# Bash Colors
+
+https://averagelinuxuser.com/linux-terminal-color/
+https://averagelinuxuser.com/linux-terminal-color/
