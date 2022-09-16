@@ -86,3 +86,15 @@ optimus-manager --switch hybrid
 It is important to manually configure power management. Prior to this 
 the GPU will remain on and consuming power as it is disabled by default since v1.2
 we must however be careful as incorrect configuration can break the boot process.
+
+
+I am using the latest driver and have a Turing generation GPU and coffee lake cpu, 
+therefore I can use the following method:
+
+Temporary config can be made to prevent the chance of lockup:
+optimus-manager --temp-config path/to/file.conf
+
+main changes should be stored in:
+/etc/optimus-manager/optimus-manager.conf
+
+https://github.com/Askannz/optimus-manager/wiki/A-guide--to-power-management-options
