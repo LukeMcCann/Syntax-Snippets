@@ -47,3 +47,6 @@ Subtraction Returns a Difference
 Multiplication Returns a Product
 Division Returns a Quotient
 
+
+dividend     division    quotient
+  15      /      5     =   3 
