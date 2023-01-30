@@ -39,3 +39,11 @@ Division is not commutative - division can be viewed as repeated subtraction
 
 
 
+An operation is commutative if changing the order of operands does not change the result. 
+An operation is associative if changing the order of parentheses does not change the result.
+
+Addition Retuns a Sum
+Subtraction Returns a Difference
+Multiplication Returns a Product
+Division Returns a Quotient
+
