@@ -32,5 +32,7 @@ int main() {
   cout << "myPointer Value: " << *myPointer << endl;
   cout << "myDynamicPointer Value: " << *myDynamicPointer << endl;
 
+  delete myDynamicPointer; // Deallocate memory from the heap
+
   return 0;
 }
